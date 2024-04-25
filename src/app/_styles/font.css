@@ -1,0 +1,32 @@
+@import url('https://fonts.cdnfonts.com/css/facon');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+.font-facon{
+  font-family: 'Facon', sans-serif;
+}
+
+.font-blackhansans {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-oswald-600 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: bold;
+  font-weight: 600;
+}
+
+.font-oswald-200 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: light;
+  font-weight: 200;
+}
+
+.font-spoqa{
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
