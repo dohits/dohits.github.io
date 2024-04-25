@@ -45,7 +45,7 @@ function SidebarLeftComponent(){
       <div className="z-10 sticky hidden md:block h-full w-full max-w-[250px] font-spoqa ml-10">
         <div className="mt-8 px-4 py-4 bg-white rounded-3xl">
           <ul className="grid h-16 w-full place-content-center rounded-lg text-2xl text-purple-600 font-bold">
-            This is leftmenu
+            This is Leftmenu
           </ul>
 
           {/* 최상위 메뉴 ---------------------------------- */}
