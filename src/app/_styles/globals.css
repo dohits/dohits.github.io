@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background: #f5f5f7;
+  background: #09090B;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,7 +12,20 @@
 }
 
 body {
+  overflow: hidden;
 }
+
+/*-- 스크롤바 ---------------------*/
+/* width */
+.customScroll::-webkit-scrollbar { width: 0px;} 
+.customScroll:hover::-webkit-scrollbar { width: 1px;}
+/* Track */
+.customScroll::-webkit-scrollbar-track {background: #09090B;}
+/* Handle */
+.customScroll::-webkit-scrollbar-thumb {background: #6EE7B7;border-radius: 5px;}
+/* Handle on hover */
+.customScroll::-webkit-scrollbar-thumb:hover {background: #555;}
+/*--------------------- 스크롤바 --*/
 
 @layer utilities {
 }

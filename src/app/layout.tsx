@@ -7,6 +7,7 @@ import "@/app/_styles/font.css";
 import HeaderComponent from "./_components/HeaderComponent";
 import SidebarLeftComponent from "./_components/SideBarLeftComponent";
 import SidebarRightComponent from "./_components/SideBarRightComponent";
+import FooterComponent from "./_components/FooterComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,11 +25,12 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <HeaderComponent/>
-        <div className="flex w-full justify-between bg-[#f5f5f7]">
+        <div className="flex w-full justify-between bg-zinc-950 overflow-hidden h-[100vh]">
           <SidebarLeftComponent/>
-          {children}
+            <div className="w-full overflow-y-scroll customScroll">{children}</div>
           <SidebarRightComponent/>
         </div>
+        {/*<FooterComponent/>*/}
       </body>
     </html>
   );
