@@ -46,11 +46,11 @@ function SidebarLeftComponent(){
   return (
     <>
       <div className="z-10 sticky top-12 hidden md:block h-full w-full max-w-[250px] font-spoqa ml-10 overflow-y-scroll customScroll">
-        <div className="mt-8 px-4 py-4 bg-zinc-800 rounded-3xl">
+        <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
           <ul className="flex justify-center h-10 w-full place-content-center rounded-lg">
             <li className="content-center w-full">
-              <p className="text-[12px] text-white font-thin">Left menu</p>
-              <p className="text-2xl text-emerald-200 font-bold">Left menu</p>
+              <p className="text-[12px] text-white font-thin">profile open</p>
+              <p className="text-2xl text-emerald-200 font-bold">this is profile</p>
               <div className="bg-emerald-200 h-[1px] w-full"></div>
             </li>
           </ul>

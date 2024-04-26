@@ -4,7 +4,7 @@ function HeaderComponent(){
 
   return (
     <>
-      <div className="z-10 sticky top-0 bg-zinc-950 flex items-center justify-between h-12 text-white px-4 lg:px-6 space-x-7 font-spoqa">
+      <div className="z-10 sticky top-0 bg-zinc-950 flex items-center justify-between h-12 text-white px-4 lg:px-6 space-x-7 font-spoqa border-solid border-b-[1px] border-zinc-800">
         {/* Left Section ------------------------------------------------------------------------------------------------------------*/}
         <ul className="h-full w-full">
           <div className="h-full w-full">
