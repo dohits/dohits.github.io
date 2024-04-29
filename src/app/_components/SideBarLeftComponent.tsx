@@ -58,7 +58,8 @@ function SidebarLeftComponent(){
           {Object.values(menuTree).map((menu) => (
             <ul key={menu.id} className="mt-1 space-y-1">                             {/* path 일치시 해당 아코디언만 열리도록 */}
               <details className="group [&_summary::-webkit-details-marker]:hidden" open={menu.children.some(child => child.path === pathname)}>
-                <summary className={menu.path === pathname || menu.children.some(child => child.path === pathname) ? "flex bg-emerald-300 cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-black font-bold" 
+                <summary className={menu.path === pathname || menu.children.some(child => child.path === pathname) ? 
+                "flex bg-emerald-300 cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-black font-bold" 
                 : "flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-zinc-400 hover:bg-gray-100 hover:text-gray-700" }>
 
                 {menu.children.length > 0 ?  /* 하위 메뉴 존재시 드롭 다운 */
@@ -95,11 +96,16 @@ function SidebarLeftComponent(){
             </ul>
           ))}
         </div>
-        <div className="bg-black h-96">asdf</div>
-        <div className="bg-black h-96">asdf</div>
-        <div className="bg-black h-96">asdf</div>
       </div>
       
     </>
   );
 }export default SidebarLeftComponent;
+
+
+/* 스크롤 테스트용
+
+        <div className="bg-black h-96">asdf</div>
+        <div className="bg-black h-96">asdf</div>
+        <div className="bg-black h-96">asdf</div>
+*/

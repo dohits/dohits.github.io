@@ -23,6 +23,34 @@ export default function About() {
           </li>
 
           <li className="mt-4">
+            <div className="text-white text-xl font-bold">- Frameworks, Platforms and Libraries </div>
+            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+              <img className="h-full rounded-md mt-2 ml-2" src={process.env.NEXT_PUBLIC_URL + '/badges/springBadge.svg'} alt="springBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/egovBadge.svg'} alt="egovBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/thymeleafBadge.svg'} alt="thymeleafBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/reactBadge.svg'} alt="reactBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/nextjsBadge.svg'} alt="nextjsBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/nodejsBadge.svg'} alt="nodejsBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/expressjsBadge.svg'} alt="expressjsBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/flaskBadge.svg'} alt="flaskBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/jqueryBadge.svg'} alt="jqueryBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/tailwindBadge.svg'} alt="tailwindBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/bootstrapBadge.svg'} alt="bootstrapBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/muiBadge.svg'} alt="muiBadge" />
+            </div>
+          </li>
+
+          <li className="mt-4">
+            <div className="text-white text-xl font-bold">- DB / DBTools</div>
+            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+              <img className="h-full rounded-md mt-2 ml-2" src={process.env.NEXT_PUBLIC_URL + '/badges/mysqlBadge.svg'} alt="mysqlBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/oracledbBadge.svg'} alt="oracledbBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/dbeaverBadge.svg'} alt="dbeaverBadge" />
+              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/sqlgateBadge.svg'} alt="sqlgateBadge" />
+            </div>
+          </li>
+
+          <li className="mt-4">
             <div className="text-white text-xl font-bold">- IDEs / Editors</div>
             <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={process.env.NEXT_PUBLIC_URL + '/badges/eclipseBadge.svg'} alt="eclipseBadge" />
@@ -47,24 +75,6 @@ export default function About() {
             <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={process.env.NEXT_PUBLIC_URL + '/badges/figmaBadge.svg'} alt="figmaBadge" />
               <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/jiraBadge.svg'} alt="jiraBadge" />
-            </div>
-          </li>
-
-          <li className="mt-4">
-            <div className="text-white text-xl font-bold">- Frameworks, Platforms and Libraries </div>
-            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
-              <img className="h-full rounded-md mt-2 ml-2" src={process.env.NEXT_PUBLIC_URL + '/badges/springBadge.svg'} alt="springBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/egovBadge.svg'} alt="egovBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/thymeleafBadge.svg'} alt="thymeleafBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/reactBadge.svg'} alt="reactBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/nextjsBadge.svg'} alt="nextjsBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/nodejsBadge.svg'} alt="nodejsBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/expressjsBadge.svg'} alt="expressjsBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/flaskBadge.svg'} alt="flaskBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/jqueryBadge.svg'} alt="jqueryBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/tailwindBadge.svg'} alt="tailwindBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/bootstrapBadge.svg'} alt="bootstrapBadge" />
-              <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/muiBadge.svg'} alt="muiBadge" />
             </div>
           </li>
 

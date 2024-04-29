@@ -1,6 +1,11 @@
 "use client"
 
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
+
+/*function HeaderComponent({hamburgerOpen}:{hamburgerOpen:string}){*/
 function HeaderComponent(){
+  const pathname = usePathname();
 
   return (
     <>
