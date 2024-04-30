@@ -27,7 +27,7 @@ export default function RootLayout({
         <HeaderComponent/>
         <div className="flex w-full justify-between bg-zinc-950 overflow-hidden h-[100vh]">
           <SidebarLeftComponent/>
-            <div className="w-full overflow-y-scroll customScroll font-spoqa">{children}</div>
+            <div className="w-full overflow-y-scroll customScroll font-spoqa m-8">{children}</div>
           <SidebarRightComponent/>
         </div>
         {/*<FooterComponent/>*/}
