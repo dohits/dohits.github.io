@@ -1,1 +1,13 @@
-.MARKDOWN_CONTAINER{}
+.MARKDOWN_CONTAINER{
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important;
+  
+}
+
+.MARKDOWN_CONTAINER h1,h2,h3 {
+  border-bottom:0px !important;
+}
+
+.MARKDOWN_CONTAINER pre{
+  background: #f6f8faf0 !important;
+}
+

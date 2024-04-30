@@ -3,7 +3,6 @@ import "@/interface/post";
 
 export async function generateStaticParams() {
   const products =  getPostSlug();
-  
   return products.map(product => ({
     slug: product,
   }));
@@ -17,9 +16,6 @@ export default async function Posts({params}:{params:any}) {
   if (postData){
     return (
       <>
-        <div className="text-white">
-          {slug}
-        </div>
         <MarkdownRender content={postData}/>
       </>
     );

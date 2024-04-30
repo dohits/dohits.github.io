@@ -76,14 +76,16 @@ export async function selectPost (slug:string) {
 // 렌더링
 export async function MarkdownRender ({content} : {content:any}){
   if (!content){return;}
-  console.log('불렀다 !');
   return (
     <>
       <div className='MARKDOWN_CONTAINER markdown-body !bg-black'>
-        <div className='text-white text-4xl border-solid border-b-2 border-emerald-400 p-6'>{content.postDetail.title}</div>
-        <div className=''><MDXRemote source={content.postDetail.date}/></div>
+        <div className='border-solid border-b-2 border-emerald-400 m-[5px] sm:m-[50px]'>
+          <div className='text-zinc-400 text-left text-xs italic'>카테고리 - 카테고리</div>
+          <div className='text-white text-center text-xl sm:text-4xl font-bold italic'>{content.postDetail.title}</div>
+          <div className='text-zinc-400 text-center text-md italic'>{content.postDetail.desc}</div>
+          <div className='text-white flex justify-end'><MDXRemote source={content.postDetail.date}/></div>
+        </div>
         <div className="text-white">
-            asdfasdfasdfasd
           <MDXRemote source={content.postDetail.content}/>
         </div>
       </div>
