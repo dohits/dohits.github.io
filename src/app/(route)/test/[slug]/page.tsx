@@ -1,4 +1,4 @@
-import {getPostSlug, selectPost, MarkdownRender} from "@/lib/postParser";
+import {getPostSlug, selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
 import "@/interface/post";
 
 export async function generateStaticParams() {

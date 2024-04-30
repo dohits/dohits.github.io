@@ -3,8 +3,7 @@ import path,{basename} from 'path';
 import matter from 'gray-matter';
 import { sync } from 'glob';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-
-import  "github-markdown-css";
+import "github-markdown-css";
 
 const BASE_PATH = "/_data/_posts";
 const POSTS_PATH = path.join(process.cwd(), BASE_PATH);
@@ -77,13 +76,16 @@ export async function selectPost (slug:string) {
 // 렌더링
 export async function MarkdownRender ({content} : {content:any}){
   if (!content){return;}
-  console.log(content);
+  console.log('불렀다 !');
   return (
     <>
-      <div className='text-white text-4xl !border border-red-400 !border-solid !border-b-2'>{content.postDetail.title}</div>
-      <div className='border border-red-400 border-[16px]'><MDXRemote source={content.postDetail.date}/></div>
-      <div className="!text-white markdown-body !bg-transparent">
-        <MDXRemote source={content.postDetail.content}/>
+      <div className='MARKDOWN_CONTAINER markdown-body !bg-black'>
+        <div className='text-white text-4xl border-solid border-b-2 border-emerald-400 p-6'>{content.postDetail.title}</div>
+        <div className=''><MDXRemote source={content.postDetail.date}/></div>
+        <div className="text-white">
+            asdfasdfasdfasd
+          <MDXRemote source={content.postDetail.content}/>
+        </div>
       </div>
     </>
   )

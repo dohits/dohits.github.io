@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "@/app/_styles/globals.css";
 import "@/app/_styles/reset.css";
 import "@/app/_styles/font.css";
+import "@/app/_styles/markdown.css";
 
 import HeaderComponent from "./_components/HeaderComponent";
 import SidebarLeftComponent from "./_components/SideBarLeftComponent";
@@ -21,11 +22,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="ko">
       <body className={inter.className}>
         <HeaderComponent/>
-        <div className="flex w-full justify-between bg-zinc-950 overflow-hidden h-[100vh]">
+        <div className="dark-mode flex w-full justify-between bg-zinc-950 overflow-hidden h-[100vh]">
           <SidebarLeftComponent/>
             <div className="w-full overflow-y-scroll customScroll font-spoqa m-8">{children}</div>
           <SidebarRightComponent/>
