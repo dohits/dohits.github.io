@@ -26,6 +26,23 @@ export default function RootLayout({
 
   return (
     <html lang="ko">
+      {/* Google Tag Manager 스크립트 [google analytics] */}
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q4M9LNEB4Y"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Q4M9LNEB4Y');
+            `,
+          }}
+        ></script>
+      </head>
       <body className={inter.className}>
         <HeaderComponent/>
         <div className="dark-mode flex w-full justify-between bg-zinc-950 h-[92vh] overflow-hidden">

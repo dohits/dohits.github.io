@@ -45,9 +45,8 @@
 
 .glitch {
   position: relative;
-  font-size: 50px;
   font-weight: bold;
-  color: #FFFFFF;
+  color:white;
   letter-spacing: 3px;
   z-index: 1;
 }

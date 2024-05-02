@@ -14,7 +14,12 @@ export default function Home() {
             </div>
           </div>
         </li>
-        <li className="mt-10 text-white">홈 화면입니다. 아직 아무것도 없어요.</li>
+        <li className="mt-10 text-white">
+          Visit Counter
+        </li>
+        <li className="mt-10 text-white">
+          recent / popular
+        </li>
       </ul>
     </main>
   );
