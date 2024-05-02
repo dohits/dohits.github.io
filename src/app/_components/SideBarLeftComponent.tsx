@@ -57,7 +57,7 @@ function SidebarLeftComponent(){
     <>
       { openState ?
       <>
-        <div className="z-10 fixed md:sticky bg-zinc-900 md:bg-zinc-950 pl-3 md:pl-0 h-full w-full max-w-[250px] font-spoqa overflow-y-scroll customScroll anime-lr-move z-30">
+        <div className="z-10 fixed md:sticky bg-zinc-950 pl-3 md:pl-0 h-full w-full max-w-[250px] font-spoqa overflow-y-scroll customScroll anime-lr-move z-30">
           <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
             <ul className="flex justify-center h-10 w-full place-content-center rounded-lg">
               <li className="content-center w-full">
@@ -107,9 +107,6 @@ function SidebarLeftComponent(){
                 </details>
               </ul>
             ))}
-            <div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div>
-
-
           </div>
         </div>
         <div className="animate-bounce fixed z-30">

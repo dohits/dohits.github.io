@@ -78,7 +78,7 @@ export async function MarkdownRender ({content} : {content:any}){
   if (!content){return;}
   return (
     <>
-      <div className='MARKDOWN_CONTAINER markdown-body !bg-black'>
+      <div className='MARKDOWN_CONTAINER markdown-body !bg-zinc-950'>
         <div className='border-solid border-b-2 border-emerald-400 m-[5px] sm:m-[50px]'>
           <div className='text-zinc-400 text-left text-xs italic'>카테고리 - 카테고리</div>
           <div className='text-white text-center text-xl sm:text-4xl font-bold italic'>{content.postDetail.title}</div>

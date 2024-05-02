@@ -15,7 +15,9 @@ export default function Home() {
           </div>
         </li>
         <li className="mt-10 text-white">
-          Visit Counter
+          <a href="https://hits.sh/dohits.github.io/">
+            <img alt="Hits" src="https://hits.sh/dohits.github.io.svg?view=today-total&style=for-the-badge&label=visitors&color=09090B&labelColor=09090B&logo=github"/>
+          </a>
         </li>
         <li className="mt-10 text-white">
           recent / popular
