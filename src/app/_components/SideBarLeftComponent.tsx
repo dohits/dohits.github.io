@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import DropdownBtnIcon from "@/app/_icons/DropdownBtnIcon";
+import { useState } from "react";
 
 function SidebarLeftComponent(){
 
@@ -13,6 +14,11 @@ function SidebarLeftComponent(){
     path: string;
     children?: MenuDataType[];
   };
+  const [openState, setOpenState] = useState(false);
+  
+  const handleOpen = () => {
+    setOpenState(!openState);
+  }
 
   const menuData:MenuDataType[] = [
     { id: '1', menu_code: 'home', menu_up_code: 'root', name: '홈', path: '/' },
@@ -48,59 +54,76 @@ function SidebarLeftComponent(){
 
   return (
     <>
-      <div className="z-10 sticky top-12 hidden md:block h-full w-full max-w-[250px] font-spoqa ml-10 overflow-y-scroll customScroll">
-        <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
-          <ul className="flex justify-center h-10 w-full place-content-center rounded-lg">
-            <li className="content-center w-full">
-              <p className="text-[12px] text-white font-thin">profile open</p>
-              <p className="text-2xl text-emerald-200 font-bold">this is profile</p>
-              <div className="bg-emerald-200 h-[1px] w-full"></div>
-            </li>
-          </ul>
-          {/* 최상위 메뉴 ---------------------------------- */}
-          {Object.values(menuTree).map((menu) => (
-            <ul key={menu.id} className="mt-1 space-y-1">                             {/* path 일치시 해당 아코디언만 열리도록 */}
-              <details className="group [&_summary::-webkit-details-marker]:hidden" open={menu.children.some(child => child.path === pathname)}>
-                <summary className={menu.path === pathname || menu.children.some(child => child.path === pathname) ? 
-                "flex bg-emerald-300 cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-black font-bold" 
-                : "flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-zinc-400 hover:bg-gray-100 hover:text-gray-700" }>
-
-                {menu.children.length > 0 ?  /* 하위 메뉴 존재시 드롭 다운 */
-                  <>
-                    <span className="text-[13px]"> {menu.name} </span>
-                    <div className="w-5 h-5 shrink-0 transition duration-300 group-open:-rotate-180">
-                      {menu.path === pathname || menu.children.some(child => child.path === pathname) ? <DropdownBtnIcon color="#000000"/>:<DropdownBtnIcon color="#A1A1AA"/>}
-                    </div>
-                  </>
-                  :
-                  <>
-                    <Link href={menu.path} className="w-full">
-                      <span className="text-[13px]"> {menu.name} </span>
-                    </Link>
-                  </>
-                }
-                </summary>
-                {/* 하위 메뉴 -------------------------------------- */}
-                {menu.children.length > 0 && (
-                  <ul className="ml-4">
-                    {menu.children.map((child) => (
-                      <li key={child.id} className="text-[12px]">
-                        <Link
-                          className={child.path === pathname ? "block rounded-lg bg-emerald-200 mt-2 px-4 py-2 text-gray-700 text-emerald-600" : "flex cursor-pointer items-center justify-between rounded-lg mt-2 px-4 py-2 text-zinc-400 hover:bg-gray-100 hover:text-gray-700"}
-                          href={child.path}
-                        >
-                          {child.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </details>
+      { openState ?
+      <>
+        <div className="z-10 fixed md:sticky bg-zinc-900 md:bg-zinc-950 pl-3 md:pl-0 h-full w-full max-w-[250px] font-spoqa overflow-y-scroll customScroll anime-lr-move z-30">
+          <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
+            <ul className="flex justify-center h-10 w-full place-content-center rounded-lg">
+              <li className="content-center w-full">
+                <p className="text-[12px] text-white font-thin">profile open</p>
+                <p className="text-2xl text-emerald-200 font-bold">this is profile</p>
+                <div className="bg-emerald-200 h-[1px] w-full"></div>
+              </li>
             </ul>
-          ))}
+            {/* 최상위 메뉴 ---------------------------------- */}
+            {Object.values(menuTree).map((menu) => (
+              <ul key={menu.id} className="mt-1 space-y-1">                             {/* path 일치시 해당 아코디언만 열리도록 */}
+                <details className="group [&_summary::-webkit-details-marker]:hidden" open={menu.children.some(child => child.path === pathname)}>
+                  <summary className={menu.path === pathname || menu.children.some(child => child.path === pathname) ? 
+                  "flex bg-emerald-300 cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-black font-bold" 
+                  : "flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-zinc-400 hover:bg-gray-100 hover:text-gray-700" }>
+  
+                  {menu.children.length > 0 ?  /* 하위 메뉴 존재시 드롭 다운 */
+                    <>
+                      <span className="text-[13px]"> {menu.name} </span>
+                      <div className="w-5 h-5 shrink-0 transition duration-300 group-open:-rotate-180">
+                        {menu.path === pathname || menu.children.some(child => child.path === pathname) ? <DropdownBtnIcon color="#000000"/>:<DropdownBtnIcon color="#A1A1AA"/>}
+                      </div>
+                    </>
+                    :
+                    <>
+                      <Link href={menu.path} className="w-full">
+                        <span className="text-[13px]"> {menu.name} </span>
+                      </Link>
+                    </>
+                  }
+                  </summary>
+                  {/* 하위 메뉴 -------------------------------------- */}
+                  {menu.children.length > 0 && (
+                    <ul className="ml-4">
+                      {menu.children.map((child) => (
+                        <li key={child.id} className="text-[12px]">
+                          <Link
+                            className={child.path === pathname ? "block rounded-lg bg-emerald-200 mt-2 px-4 py-2 text-gray-700 text-emerald-600" : "flex cursor-pointer items-center justify-between rounded-lg mt-2 px-4 py-2 text-zinc-400 hover:bg-gray-100 hover:text-gray-700"}
+                            href={child.path}
+                          >
+                            {child.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </details>
+              </ul>
+            ))}
+            <div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div><div>asdf<br></br></div>
+
+
+          </div>
         </div>
-      </div>
-      
+        <div className="animate-bounce fixed z-30">
+          <img className="min-w-7 w-7 h-full content-center rotate-90 mt-3 ml-3 z-20" src={process.env.NEXT_PUBLIC_URL + '/icons/sidebarBtn.svg'} alt="sidebarBtn"
+          onClick={handleOpen} />
+        </div>
+        <div className="fixed bg-zinc-950 h-[100vh] w-[100vw] opacity-75 z-20 block md:hidden" onClick={handleOpen}>
+        </div>
+        </>
+        :
+        <div className="animate-bounce fixed">
+          <img className="min-w-7 w-7 h-full content-center -rotate-90 mt-3 ml-3 z-20" src={process.env.NEXT_PUBLIC_URL + '/icons/sidebarBtn.svg'} alt="sidebarBtn"
+          onClick={handleOpen} />
+        </div>
+      }
     </>
   );
 }export default SidebarLeftComponent;

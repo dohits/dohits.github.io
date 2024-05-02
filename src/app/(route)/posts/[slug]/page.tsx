@@ -3,18 +3,19 @@ export default function Posts() {
   return (
     <>
       <div className="text-white">
-        asdf
+        전체글
       </div>
     </>
   );
 }
 
 export async function generateStaticParams() {
-  const products = ['goodpage','123','ttdas'];
-  return products.map(product => ({
-    slug: product,
+  const categories = ['all','one','two'];
+  return categories.map((category) => ({
+    slug: category,
   }));
-}  
+}
+
 
 /* 
     경로 생성 후 없는 경로로 진입시 

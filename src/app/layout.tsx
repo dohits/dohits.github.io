@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "@/app/_styles/globals.css";
 import "@/app/_styles/reset.css";
 import "@/app/_styles/font.css";
+import "@/app/_styles/animation.css";
 import "@/app/_styles/markdown.css";
 
 import HeaderComponent from "./_components/HeaderComponent";
@@ -27,12 +28,14 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <HeaderComponent/>
-        <div className="dark-mode flex w-full justify-between bg-zinc-950 overflow-hidden h-[100vh]">
+        <div className="dark-mode flex w-full justify-between bg-zinc-950 h-[92vh] overflow-hidden">
           <SidebarLeftComponent/>
-            <div className="w-full overflow-y-scroll customScroll font-spoqa m-8">{children}</div>
+            <div className="w-full overflow-y-scroll customScroll font-spoqa p-8">
+              {children}
+              <FooterComponent/>
+            </div>
           <SidebarRightComponent/>
         </div>
-        {/*<FooterComponent/>*/}
       </body>
     </html>
   );

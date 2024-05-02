@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <main className="w-full h-full flex">
-      <div className="w-full h-[3200px] mt-8 mx-12 my-4">
+    <main className="flex">
+      <div>
         <ul>
           <li className="text-white text-6xl font-bold">About</li>
         </ul>

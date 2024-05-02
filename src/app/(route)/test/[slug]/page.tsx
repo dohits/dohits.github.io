@@ -1,4 +1,5 @@
 import {getPostSlug, selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
+import {parsePostDetail, parsePost, parsePostAbstract,getPostPaths,getPostList} from "@/app/_utils/_lib/postParser";
 import "@/interface/post";
 
 export async function generateStaticParams() {
@@ -12,6 +13,24 @@ export async function generateStaticParams() {
 export default async function Posts({params}:{params:any}) {
   const {slug} = params;
   const postData = await selectPost(slug);
+
+
+  const ppd = await parsePostDetail("_data/_posts/categorytest.mdx");
+  const pp:post = await parsePost("_data/_posts/categorytest.mdx");
+  const ppa = parsePostAbstract("_data/_posts/categorytest.mdx");
+  const gpp = getPostPaths();
+  const gpl = await getPostList();
+  const gps = getPostSlug();
+
+  //console.log(ppd);
+  //console.log(pp);
+  //console.log(ppa); // url + slug
+  //console.log(gpp); // 경로
+  
+  //console.log(gpl);
+  //console.log(gps);
+  //console.log("slug ::: " + slug);
+
 
   if (postData){
     return (
