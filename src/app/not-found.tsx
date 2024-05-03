@@ -4,7 +4,7 @@ const NotFound: NextPage = () => {
   return (
     <>
       <div className="text-white">
-        페이지를 찾을수없어요
+        존재하지 않는 페이지네요...
       </div>
     </>
   )

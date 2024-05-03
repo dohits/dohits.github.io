@@ -32,6 +32,7 @@ function SidebarLeftComponent(){
     { id: '6', menu_code: 'test', menu_up_code: 'root', name: '마크다운테스트(작동됨)', path: '/test' },
     { id: '601', menu_code: 'test_example', menu_up_code: 'test', name: 'example 게시글', path: '/test/example' },
     { id: '602', menu_code: 'test_hello-world', menu_up_code: 'test', name: 'hello-world 게시글', path: '/test/hello-world' },
+    { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment', path: '/comment' },
   ];
 
   const buildMenuTree = (menuData: MenuDataType[]) => {

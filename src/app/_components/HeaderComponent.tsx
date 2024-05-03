@@ -31,6 +31,7 @@ function HeaderComponent(){
             <div>Project</div>
             <div>About</div>
             <div>Contact</div>
+            <div>Comments</div>
           </li>
           <li className="hidden md:hidden items-center space-x-3 h-full">
             <img className="min-w-5 w-5 h-full content-center" src={process.env.NEXT_PUBLIC_URL + '/icons/hamburgerBtn.svg'} alt="hambergerBtn" />
