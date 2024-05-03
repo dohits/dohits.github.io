@@ -25,17 +25,22 @@ export const parsePostDetail = async (postPath: string) => {
 };
  
 export const parsePostAbstract = (postPath: string) => {
-  
+
   const filePath = postPath
     .slice(postPath.indexOf(BASE_PATH) + BASE_PATH.length + 1)
     .replace(`${BASE_PATH}/`, '')
     .replace('.mdx', '');
 
-  const [slug] = filePath.split('/');
+  const [category, slug] = filePath.split('\\');
  
-  const url = `/test/${slug}`;
- 
-  return { url, slug };
+
+  let url = `/test2/${category}/${slug}`;
+  
+  if(slug==="" || slug===undefined){
+    url = `/test2/${category}`;
+  }
+
+  return { url, category, slug };
 };
 
 //MDX LIST 포스트 리스트 --------------------------------------------
@@ -68,9 +73,12 @@ export const getPostSlug = (category?: string) => {
 
 //MDX 단일 호출  ----------------------------------------------------
 // 포스트 읽어오기
-export async function selectPost (slug:string) {
-  if (!slug){return;}
-  const pp:post = await parsePost("_data/_posts/"+ slug +".mdx");
+export async function selectPost (slug:string, category?:string) {
+  if (!category){
+    const pp:post = await parsePost("_data/_posts/"+ slug +".mdx");  
+    return pp;
+  }
+  const pp:post = await parsePost("_data/_posts/" + category + "/" + slug +".mdx");
   return pp;
 }
 // 렌더링
@@ -99,3 +107,11 @@ const ppa = parsePostAbstract("_data/_posts/hello-world.mdx");
 const gpp = getPostPaths();
 const gpl = await getPostList();
 const gps = getPostSlug();*/
+
+
+/*
+  // 쿼리스트링 디코딩
+  console.log("======================= 1::: " + postPath)
+  const decodedSlug = decodeURIComponent(postPath);
+  console.log("======================= 2::: " + decodedSlug)
+*/

@@ -29,11 +29,9 @@ function SidebarLeftComponent(){
     { id: '3', menu_code: 'project', menu_up_code: 'root', name: 'Projext', path: '/project' },
     { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About(작동)', path: '/about' },
     { id: '5', menu_code: 'contact', menu_up_code: 'root', name: 'Contact', path: '/contact' },
-    { id: '6', menu_code: 'test', menu_up_code: 'root', name: '마크다운테스트(작동)', path: '/test' },
-    { id: '601', menu_code: 'test_example', menu_up_code: 'test', name: 'example 게시글', path: '/test/example' },
-    { id: '602', menu_code: 'test_hello-world', menu_up_code: 'test', name: 'hello-world 게시글', path: '/test/hello-world' },
     { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment(작동)', path: '/comment' },
-    { id: '8', menu_code: 'test2', menu_up_code: 'root', name: 'test2(공사중)', path: '/test2' },
+    { id: '8', menu_code: 'test2', menu_up_code: 'root', name: '포스트 보기(작동)', path: '/test2' },
+    { id: '801', menu_code: 'test2post', menu_up_code: 'test2', name: '전체글 보기(작동)', path: '/test2' },
   ];
 
   const buildMenuTree = (menuData: MenuDataType[]) => {

@@ -26,7 +26,7 @@ const Comment = ({ identifier, title }: ICommentPprops) => {
                     shortname="DohitsGithubIo" // write in discuss as a Shortname
                     config={{
                         url: process.env.NEXT_PUBLIC_SITE_URL,
-                        identifier: identifier, // 댓글창을 유니크하게 만들어주는 설정 _ 슬러그 전달할 것
+                        identifier: identifier, // 컴포넌트를 유니크하게 만들어주는 props _ slug 전달해서 사용
                         title: title,
                         language: "ko"
                     }}
