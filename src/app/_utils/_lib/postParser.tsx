@@ -58,7 +58,7 @@ export const getPostSlug = (category?: string) => {
   
   // 파일명만 추출하고 확장자를 제거하여 반환
   const fileNames = paths.map(path => {
-    const fileNameWithExtension = basename(path); // 파일명과 확장자를 포함한 부분
+    const fileNameWithExtension = basename(path); // 파일   명과 확장자를 포함한 부분
     const fileName = fileNameWithExtension.split('.').slice(0, -1).join('.'); // 확장자를 제외한 파일명만 추출
     return fileName;
   });
