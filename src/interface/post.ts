@@ -1,6 +1,8 @@
 interface post {
-  postAb? : {
-    result: string;
+  postAbstract : {
+    url?: string;
+    category?: string;
+    slug?: string;
   };
   postDetail : {
     title?: string;

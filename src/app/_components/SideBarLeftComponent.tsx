@@ -33,6 +33,7 @@ function SidebarLeftComponent(){
     { id: '601', menu_code: 'test_example', menu_up_code: 'test', name: 'example 게시글', path: '/test/example' },
     { id: '602', menu_code: 'test_hello-world', menu_up_code: 'test', name: 'hello-world 게시글', path: '/test/hello-world' },
     { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment(작동)', path: '/comment' },
+    { id: '8', menu_code: 'test2', menu_up_code: 'root', name: 'test2(공사중)', path: '/test2' },
   ];
 
   const buildMenuTree = (menuData: MenuDataType[]) => {
@@ -58,7 +59,7 @@ function SidebarLeftComponent(){
     <>
       { openState ?
       <>
-        <div className="z-10 fixed md:sticky bg-zinc-950 pl-3 md:pl-0 h-full w-full max-w-[250px] font-spoqa overflow-y-scroll customScroll anime-lr-move z-30">
+        <div className="z-10 fixed md:sticky bg-zinc-950 pl-3 md:pl-0 h-full w-full max-w-[250px] font-spoqa overflow-y-scroll customScroll anime-lr-move z-[99]">
           <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
             <ul className="flex justify-center h-10 w-full place-content-center rounded-lg">
               <li className="content-center w-full">
@@ -110,7 +111,7 @@ function SidebarLeftComponent(){
             ))}
           </div>
         </div>
-        <div className="animate-bounce fixed z-30">
+        <div className="animate-bounce fixed z-[100]">
           <Image className="min-w-7 w-7 h-full content-center rotate-90 mt-3 ml-3 z-20" src='/icons/sidebarBtn.svg' alt="sidebarBtn"
           width={100} height={100} onClick={handleOpen} />
         </div>
@@ -119,7 +120,7 @@ function SidebarLeftComponent(){
         </>
         :
         <div className="animate-bounce fixed">
-          <Image className="min-w-7 w-7 h-full content-center -rotate-90 mt-3 ml-3 z-20" src='/icons/sidebarBtn.svg' alt="sidebarBtn"
+          <Image className="min-w-7 w-7 h-full content-center -rotate-90 mt-3 ml-3 z-[100]" src='/icons/sidebarBtn.svg' alt="sidebarBtn"
           width={100} height={100} onClick={handleOpen} />
         </div>
       }
