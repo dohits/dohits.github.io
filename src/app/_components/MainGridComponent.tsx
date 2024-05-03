@@ -44,8 +44,9 @@ export default function MainPageGrid(){
           </p>
         </div>
       ))}
-        <div className="bg-zinc-700 rounded-xl" key="f" data-grid={{ x: 6, y: 0, w: 1, h: 1, minW: 1, maxW: 1, minH: 1, maxH: 2 }}>
+        <div className="bg-zinc-700 rounded-xl flex items-center" key="f" data-grid={{ x: 6, y: 0, w: 1, h: 1, minW: 1, maxW: 1, minH: 1, maxH: 2 }}>
           <ul>
+            <li className="relative bottom-0 text-6xl overflow-hidden font-thin font-oswald-200 flex justify-center">Comment</li>
           </ul>
         </div>
       </ResponsiveGridLayout>

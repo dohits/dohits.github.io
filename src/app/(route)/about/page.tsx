@@ -97,7 +97,7 @@ export default function About() {
             </div>
           </li>
 
-          <li className="mt-4">
+          <li className="mt-4 mb-4">
             <div className="text-white text-xl font-bold">- Other </div>
             <div className="flex flex-col space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl">
 
