@@ -18,11 +18,14 @@ export async function generateStaticParams() {
   
   console.log('진입');
   const gpl =  await getPostList();
-  console.log('실행');
-  return gpl.map((gpldata) => ({
+  console.log(gpl);
+
+  const result = gpl.map((gpldata) => ({
     post_category: gpldata.postAbstract.category ,
     post_title : gpldata.postAbstract.slug ,
   }));
+  console.log(result);
+  return result;
 }  
 
 
