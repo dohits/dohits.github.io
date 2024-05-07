@@ -31,7 +31,7 @@ export const parsePostAbstract = (postPath: string) => {
     .replace(`${BASE_PATH}/`, '')
     .replace('.mdx', '');
 
-  const [category, slug] = filePath.split('\\');
+  const [category, slug] = filePath.split('/');
  
 
   let url = `/test2/${category}/${slug}`;
