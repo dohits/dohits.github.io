@@ -1,14 +1,39 @@
 import {getPostSlug, selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
 import {parsePostDetail, parsePost, parsePostAbstract,getPostPaths,getPostList} from "@/app/_utils/_lib/postParser";
 
-export default function Posts() {
+import CategoryBadge from "@/app/_common/CategoryBadge";
+import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
+
+export default async function Posts({params}:{params:any}) {
+  const category = params;
+  let gpl_post = await getPostList(category.post_category);
+  let gpl_category = await getPostList();
 
   return (
-    <>
-      <div className="text-white">
-        전체글
+    <main className="flex flex-col justify-center w-full">
+      <div className="text-white">All Post</div>
+        <CategoryComponents getPostList={gpl_category} category={category}/>
+      <div className="flex flex-wrap w-full justify-center">
+        {gpl_post.map((gpldata) => (
+          <>
+            <div key={gpldata.postDetail.date}>
+              <a href={gpldata.postAbstract.url} className="w-full max-w-[500px] md:max-w-[550px]">
+                <div className="relative mt-10 p-1 overflow-hidden flex flex-col w-full text-white min-w-40">
+                  <img className="object-cover h-full w-full rounded-3xl" src='/posts/공사중.png' alt="postImg"/>
+                  <div className="text-3xl p-3">{gpldata.postDetail.title}</div>
+                  <div className="text-sm text-zinc-400 p-2">{gpldata.postDetail.desc}</div>
+                  <div className="absolute bg-zinc-900 z-10 w-full h-full opacity-0 rounded-3xl hover:opacity-75">
+                    <div className="m-4">텍스트 설명설명입니다</div>
+                  </div>
+                  <CategoryBadge value={gpldata.postAbstract.category}></CategoryBadge>
+                  <CategoryBadge sub={true} value={gpldata.postDetail.category}></CategoryBadge>
+                </div>
+              </a>
+            </div>
+          </>
+        ))}
       </div>
-    </>
+    </main>
   );
 }
 
@@ -19,7 +44,6 @@ export async function generateStaticParams() {
     post_category: gpldata.postAbstract.category ,
     /*post_title : gpldata.postAbstract.slug ,*/
   }));
-  console.log(result);
   return result;
 }  
 

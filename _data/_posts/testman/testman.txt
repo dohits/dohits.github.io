@@ -1,6 +1,6 @@
 ---
 title: "폴더테스트"
-date: "2024-02-26"
+date: "2024-02-21"
 desc: 테스트테스트테스트desc입니다,,
 thumbnail: /posts/nextjs_blog/setup/thumbnail.jpg
 category: "폴더테스트"

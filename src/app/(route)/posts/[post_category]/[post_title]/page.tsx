@@ -21,6 +21,5 @@ export async function generateStaticParams() {
     post_category: gpldata.postAbstract.category ,
     post_title : gpldata.postAbstract.slug ,
   }));
-  console.log(result);
   return result;
 }  

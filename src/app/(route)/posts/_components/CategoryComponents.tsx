@@ -1,14 +1,16 @@
 "use client"
-import {getPostSlug, selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
-import {parsePostDetail, parsePost, parsePostAbstract,getPostPaths,getPostList} from "@/app/_utils/_lib/postParser";
+import { useRouter } from 'next/navigation';
+export default function CategoryComponents({getPostList,category}:{getPostList:any,category?:any}){
+  const router = useRouter();
+  let selectCategory:string;
 
-export default async function CategoryComponents({getPostList}:{getPostList:any}){
-
-  console.log(getPostList);
+  if(category){
+    selectCategory = category.post_category;
+  }
   
-  // 카테고리 추출 로직-----------------
   const categories: { [key: string]: string[] } = {};
 
+            // 카테고리 추출
   getPostList.forEach((post:post) => {
     const majorCategory = post.postAbstract.category;
     const minorCategory = post.postDetail.category;
@@ -22,20 +24,23 @@ export default async function CategoryComponents({getPostList}:{getPostList:any}
       }
     }
   });
-  //----------------------------- 카테고리 추출 로직
-  console.log(categories);
-
-  const HandleCategory = () => {
-    console.log("d");
+           // 카테고리 핸들이벤트
+  const HandleCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const pathUrl = "/posts"
+    const category = e.target.value;
+    router.push(`${pathUrl}/${category}`);
   };
 
   return (
     <>
-      <div> {/* TODO ::: 카테고리 버튼*/}
+      <div>
         <select className="text-zinc-950 w-full" name="categoryLinker" onChange={HandleCategory}>
-        {Object.keys(categories).map((majorCategory) => (
-          <option key={majorCategory}>{majorCategory}</option>
-        ))}
+          <option key="all" value="">전체글보기</option>
+          {Object.keys(categories).map((majorCategory) => (
+            selectCategory === majorCategory ? (
+              <option key={majorCategory} value={majorCategory} selected>{majorCategory}</option>
+            ) : <option key={majorCategory} value={majorCategory}>{majorCategory}</option>
+          ))}
         </select>
       </div>
     </>
