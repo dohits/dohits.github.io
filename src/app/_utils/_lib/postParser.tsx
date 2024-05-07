@@ -25,7 +25,6 @@ export const parsePostDetail = async (postPath: string) => {
 };
  
 export const parsePostAbstract = (postPath: string) => {
-
   const filePath = postPath
     .slice(postPath.indexOf(BASE_PATH) + BASE_PATH.length + 1)
     .replace(`${BASE_PATH}/`, '')

@@ -6,7 +6,8 @@ import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponen
 
 export default async function Posts({params}:{params:any}) {
   const category = params;
-  let gpl_post = await getPostList(category.post_category);
+  
+  let gpl_post = await getPostList(decodeURI(category.post_category));
   let gpl_category = await getPostList();
 
   return (
