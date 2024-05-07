@@ -15,10 +15,7 @@ export default async function Posts({params}:{params:any}) {
 }
 
 export async function generateStaticParams() {
-  
-  console.log('진입');
   const gpl =  await getPostList();
-  console.log(gpl);
 
   const result = gpl.map((gpldata) => ({
     post_category: gpldata.postAbstract.category ,
@@ -27,33 +24,3 @@ export async function generateStaticParams() {
   console.log(result);
   return result;
 }  
-
-
-
-/*
-
-  const products =  getPostSlug();
-  const gpl =  await getPostList();
-  const categories: string[] = [];
-  const categorySet = new Set<string>();
-
-  Object.values(gpl).forEach(item => {
-      const category = item.postAbstract.category;
-      if (category !== undefined && !categorySet.has(category)) {
-          categorySet.add(category);
-          categories.push(category);
-      }
-  });
-
-  const result: { post_category: string; post_title: string; }[] = [];
-  categories.forEach(category => {
-    products.forEach(product => {
-      result.push({
-        post_category: category,
-        post_title: product,
-      });
-    });
-  });
-
-
-*/

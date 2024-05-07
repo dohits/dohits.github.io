@@ -4,9 +4,48 @@ import CategoryBadge from "@/app/_common/CategoryBadge";
 
 export default async function allpost() {
   let gpl = await getPostList();
+  // 카테고리 추출 로직-----------------
+  const categories: { [key: string]: string[] } = {};
+
+  gpl.forEach(post => {
+    const majorCategory = post.postAbstract.category;
+    const minorCategory = post.postDetail.category;
+    
+    if (majorCategory !== undefined) {
+      if (!categories[majorCategory]) {
+        categories[majorCategory] = [];
+      }
+      if (minorCategory !== undefined && !categories[majorCategory].includes(minorCategory)) {
+        categories[majorCategory].push(minorCategory);
+      }
+    }
+  });
+  //----------------------------- 카테고리 추출 로직
+  console.log(categories);
+
   return (
     <main className="flex flex-col justify-center w-full">
       <div className="text-white">All Post</div>
+
+
+      <ul> {/* TODO ::: 카테고리 버튼*/}
+        {Object.keys(categories).map((key) => (
+          <li key={key} className="text-white">
+            {/* 대분류 */}
+            {key}
+            {/* 소분류 */}
+            <ul>
+              {categories[key].map((subcategory, index) => (
+                <li key={index} className="text-red-200">{subcategory}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+
+
+
+
       <div className="flex flex-wrap w-full justify-center">
         {gpl.map((gpldata) => (
           <>

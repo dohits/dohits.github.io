@@ -23,15 +23,13 @@ function SidebarLeftComponent(){
 
   const menuData:MenuDataType[] = [
     { id: '1', menu_code: 'home', menu_up_code: 'root', name: '홈', path: '/' },
-    { id: '2', menu_code: 'post', menu_up_code: 'root', name: 'Post', path: '/post' },
-    { id: '201', menu_code: 'postall', menu_up_code: 'post', name: '전체글보기', path: '/post' },
-    { id: '202', menu_code: 'postfront', menu_up_code: 'post', name: 'Frontend', path: '/post/prontend' },
-    { id: '3', menu_code: 'project', menu_up_code: 'root', name: 'Projext', path: '/project' },
-    { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About(작동)', path: '/about' },
-    { id: '5', menu_code: 'contact', menu_up_code: 'root', name: 'Contact', path: '/contact' },
-    { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment(작동)', path: '/comment' },
-    { id: '8', menu_code: 'test2', menu_up_code: 'root', name: '포스트 보기(작동)', path: '/test2' },
-    { id: '801', menu_code: 'test2post', menu_up_code: 'test2', name: '전체글 보기(작동)', path: '/test2' },
+    { id: '2', menu_code: 'posts', menu_up_code: 'root', name: 'Posts(TODO::카테고리분류)', path: '/posts' },
+    { id: '201', menu_code: 'postall', menu_up_code: 'posts', name: '전체글보기', path: '/posts' },
+    { id: '202', menu_code: 'postfront', menu_up_code: 'posts', name: 'Frontend(미구현)', path: '/post/prontend' },
+    { id: '3', menu_code: 'project', menu_up_code: 'root', name: 'Projext(미구현)', path: '/project' },
+    { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About(TODO::디테일)', path: '/about' },
+    { id: '5', menu_code: 'contact', menu_up_code: 'root', name: 'Contact(미구현)', path: '/contact' },
+    { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment(TODO::디자인개선)', path: '/comment' },
   ];
 
   const buildMenuTree = (menuData: MenuDataType[]) => {
