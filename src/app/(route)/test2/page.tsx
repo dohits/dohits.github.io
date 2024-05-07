@@ -1,6 +1,7 @@
 import {getPostSlug, selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
 import {parsePostDetail, parsePost, parsePostAbstract,getPostPaths,getPostList} from "@/app/_utils/_lib/postParser";
 import CategoryBadge from "@/app/_common/CategoryBadge";
+
 export default async function allpost() {
   let gpl = await getPostList();
   return (

@@ -29,18 +29,13 @@ export async function generateStaticParams() {
       }
   });
   const result: { post_category: string; post_title: string; }[] = [];
-
   categories.forEach(category => {
     products.forEach(product => {
       result.push({
-        post_category: category,
-        post_title: product,
+        post_category: category+"",
+        post_title: product+"",
       });
     });
   });
-  
   return result;
 }  
-
-
-

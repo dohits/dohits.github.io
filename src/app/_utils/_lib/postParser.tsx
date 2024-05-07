@@ -79,6 +79,7 @@ export async function selectPost (slug:string, category?:string) {
     return pp;
   }
   const pp:post = await parsePost("_data/_posts/" + category + "/" + slug +".mdx");
+  
   return pp;
 }
 // 렌더링
