@@ -17,6 +17,7 @@ export default async function Posts({params}:{params:any}) {
 export async function generateStaticParams() {
   
   const products =  getPostSlug();
+  console.log(products);
   const gpl =  await getPostList();
   const categories: string[] = [];
   const categorySet = new Set<string>();

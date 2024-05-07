@@ -10,7 +10,7 @@ export default function Posts() {
 }
 
 export async function generateStaticParams() {
-  const categories = ['all','one','two'];
+  const categories = ['한글','one','two'];
   return categories.map((category) => ({
     post_category: category,
   }));
