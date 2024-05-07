@@ -16,11 +16,9 @@ export default async function Posts({params}:{params:any}) {
 
 export async function generateStaticParams() {
   
-  const products =  getPostSlug();
+  console.log('진입');
   const gpl =  await getPostList();
-  const categories: string[] = [];
-  const categorySet = new Set<string>();
-
+  console.log('실행');
   return gpl.map((gpldata) => ({
     post_category: gpldata.postAbstract.category ,
     post_title : gpldata.postAbstract.slug ,
