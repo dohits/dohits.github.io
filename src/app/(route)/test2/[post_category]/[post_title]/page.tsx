@@ -17,11 +17,20 @@ export default async function Posts({params}:{params:any}) {
 export async function generateStaticParams() {
   
   const products =  getPostSlug();
-  console.log(products);
   const gpl =  await getPostList();
   const categories: string[] = [];
   const categorySet = new Set<string>();
+  console.log(gpl);
 
+  return gpl.map((gpldata) => ({
+    post_category: gpldata.postAbstract.category ,
+    post_title : gpldata.postAbstract.slug ,
+  }));
+}  
+
+
+
+/*
   Object.values(gpl).forEach(item => {
       const category = item.postAbstract.category;
       if (category !== undefined && !categorySet.has(category)) {
@@ -33,10 +42,11 @@ export async function generateStaticParams() {
   categories.forEach(category => {
     products.forEach(product => {
       result.push({
-        post_category: category + "bugtest",
+        post_category: category,
         post_title: product,
       });
     });
   });
-  return result;
-}  
+
+
+*/
