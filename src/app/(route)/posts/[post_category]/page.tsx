@@ -43,7 +43,7 @@ export async function generateStaticParams() {
   const gpl =  await getPostList();
 
   const result = gpl.map((gpldata) => ({
-    post_category: gpldata.postAbstract.category ,
+    post_category: encodeURI(gpldata.postAbstract.category||'') ,
     /*post_title : gpldata.postAbstract.slug ,*/
   }));
   return result;
