@@ -33,7 +33,7 @@ export async function generateStaticParams() {
   categories.forEach(category => {
     products.forEach(product => {
       result.push({
-        post_category: category,
+        post_category: category + "bugtest",
         post_title: product,
       });
     });
