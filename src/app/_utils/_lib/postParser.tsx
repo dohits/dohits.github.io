@@ -75,11 +75,10 @@ export const getPostSlug = (category?: string) => {
 // 포스트 읽어오기
 export async function selectPost (slug:string, category?:string) {
   if (!category){
-    const pp:post = await parsePost("_data/_posts/"+ slug +".mdx");  
+    const pp:post = await parsePost(`_data/_posts/${slug}.mdx`);  
     return pp;
   }
-  const pp:post = await parsePost("_data/_posts/" + category + "/" + slug +".mdx");
-  
+  const pp:post = await parsePost(`_data/_posts/${category}/${slug}.mdx`);
   return pp;
 }
 // 렌더링
