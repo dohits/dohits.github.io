@@ -73,6 +73,10 @@ export const getPostSlug = (category?: string) => {
 //MDX 단일 호출  ----------------------------------------------------
 // 포스트 읽어오기
 export async function selectPost (slug:string, category?:string) {
+  slug = decodeURI(slug);
+  if(category){
+    category = decodeURI(category);
+  }
   if (!category){
     const pp:post = await parsePost(`_data/_posts/${slug}.mdx`);  
     return pp;

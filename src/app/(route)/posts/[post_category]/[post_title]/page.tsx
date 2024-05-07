@@ -4,7 +4,8 @@ import {parsePostDetail, parsePost, parsePostAbstract,getPostPaths,getPostList} 
 
 export default async function Posts({params}:{params:any}) {
   const {post_category,post_title} = params;
-  
+  console.log(post_category);
+  console.log(post_title);
   const postData = await selectPost(
                             decodeURI(post_title)
                             ,decodeURI(post_category));
