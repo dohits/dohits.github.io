@@ -7,8 +7,8 @@ export default async function allpost() {
   let gpl = await getPostList();
   return (
     <main className="flex flex-col justify-center w-full">
-      <div className="text-white">All Post</div>
-        <CategoryComponents getPostList={gpl}/>
+      <div className="text-white text-4xl">Post</div>
+      <CategoryComponents getPostList={gpl}/>
 {/**
  * 
  * 

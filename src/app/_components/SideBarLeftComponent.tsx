@@ -25,7 +25,7 @@ function SidebarLeftComponent(){
     { id: '1', menu_code: 'home', menu_up_code: 'root', name: '홈', path: '/' },
     { id: '2', menu_code: 'posts', menu_up_code: 'root', name: 'Posts(TODO::카테고리분류)', path: '/posts' },
     { id: '201', menu_code: 'postall', menu_up_code: 'posts', name: '전체글보기', path: '/posts' },
-    { id: '202', menu_code: 'postfront', menu_up_code: 'posts', name: 'Frontend(미구현)', path: '/post/prontend' },
+    { id: '202', menu_code: 'postfront', menu_up_code: 'posts', name: 'Frontend(미구현)', path: '/posts/Frontend' },
     { id: '3', menu_code: 'project', menu_up_code: 'root', name: 'Projext(미구현)', path: '/project' },
     { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About(TODO::디테일)', path: '/about' },
     { id: '5', menu_code: 'contact', menu_up_code: 'root', name: 'Contact(미구현)', path: '/contact' },

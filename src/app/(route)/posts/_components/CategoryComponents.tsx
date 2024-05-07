@@ -38,10 +38,10 @@ export default function CategoryComponents({getPostList,category}:{getPostList:a
   };
 
   return (
-    <>
-      <div>
-        <select className="text-zinc-950 w-full" name="categoryLinker" onChange={HandleCategory}>
-          <option key="all" value="">전체 글 &#40;{allpostCnt}&#41;</option>
+    <> {/** ul li 로 변경하여 재디자인 할것 */}
+      <div className='mt-4 /*text-center*/'>
+        <select className="p-2 rounded-3xl font-spoqa text-xs" name="categoryLinker" onChange={HandleCategory}>
+          <option key="all" value="" className='h-10'>전체 글 &#40;{allpostCnt}&#41;</option>
           {Object.keys(categories).map((majorCategory) => (
             selectCategory === majorCategory ? (
               <option key={majorCategory} value={majorCategory} selected>

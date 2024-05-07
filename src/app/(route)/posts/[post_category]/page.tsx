@@ -11,8 +11,12 @@ export default async function Posts({params}:{params:any}) {
 
   return (
     <main className="flex flex-col justify-center w-full">
-      <div className="text-white">All Post</div>
-        <CategoryComponents getPostList={gpl_category} category={category}/>
+      <div className="text-white text-4xl">Post</div>
+      <ul className="text-white flex mt-4 space-x-4">
+        <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
+        <li className="p-2">조회순</li>
+      </ul>
+      <CategoryComponents getPostList={gpl_category} category={category}/>
       <div className="flex flex-wrap w-full justify-center">
         {gpl_post.map((gpldata) => (
           <div key={gpldata.postDetail.id}>
