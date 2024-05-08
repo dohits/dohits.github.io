@@ -1,10 +1,11 @@
 import {getPostList, sortPostList} from "@/app/_utils/_lib/postParser";
 import CategoryBadge from "@/app/_common/CategoryBadge";
-import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
+import { nowPageParam } from "@/app/_components/HeaderComponent";
 
+import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
 export default async function allpost() {
   let gpl = await getPostList();
-  let spl = await sortPostList();
+  let spl = await sortPostList(1,10);
   
   return (
     <main className="flex flex-col justify-center w-full">

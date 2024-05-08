@@ -58,27 +58,23 @@ export const getPostList = async (category?: string): Promise<post[]> => {
   return posts;
 };
 
-// 글 가져와서 시간순 정렬하기
-export const sortPostList = async (value?: string) => {
-  let result;
-  if (typeof value === 'string') {
-    result = await getPostList(value);
-  } else {
-    result = await getPostList();
-  }
 
-  // postDetail.date를 기준으로 정렬하기 위해 날짜를 Date 객체로 변환
-  result.forEach((post: any) => {
-    post.postDetail.date = new Date(post.postDetail.date);
+/** (x번째부터, x개, 카테고리) 시간순 정렬 */
+export const sortPostList = async (start: number, end: number, category?: string): Promise<post[]> => {
+  let paths: string[] = getPostPaths(category);
+  let posts: post[] = await Promise.all(paths.map((postPath) => parsePost(postPath)));
+
+  // postDetail.date를 기준으로 정렬하기 위해 날짜를 Date 객체로 변환하고 정렬
+  posts.sort((a: any, b: any) => {
+    const dateA = new Date(a.postDetail.date);
+    const dateB = new Date(b.postDetail.date);
+    return dateB.getTime() - dateA.getTime();
   });
 
-  // 최신글이 앞쪽 인덱스로 오도록 (내림차순)
-  result.sort((a: any, b: any) => {
-    return b.postDetail.date - a.postDetail.date;
-  });
-
-  return result;
+  // x번째부터 y개의 글만 반환
+  return posts.slice(start -1 , start - 1 + end);
 };
+
 
 
 export const getPostSlug = (category?: string) => {

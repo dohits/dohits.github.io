@@ -1,5 +1,11 @@
 import MainGridComponent from "@/app/_components/MainGridComponent"
-export default function Home() {
+import {sortPostList} from "@/app/_utils/_lib/postParser";
+import CategoryBadge from "@/app/_common/CategoryBadge";
+
+export default async function Home() {
+
+  let spl = await sortPostList(1,1);
+
   return (
     <main className="flex flex-col justify-center w-full">
       <ul className="flex flex-col text-center w-full">
@@ -46,14 +52,34 @@ export default function Home() {
       </ul>
       <ul>
         <li className="mt-10 w-full h-full text-white">
-          recent / popular
-          <div className="relative mt-10 p-1 rounded-3xl overflow-hidden flex flex-col max-w-96">
-            <img className="object-cover h-full w-full" src='/posts/공사중.png' alt="postImg"/>
-            <div className="text-sm p-3">This is Title 이것은 제목입니다</div>
-            <div className="text-xs p-2">Detail 내용 내용 내용 입니다.</div>
-            <div className="absolute bg-zinc-900 z-30 w-full h-full opacity-0 hover:opacity-75">
-              <div className="m-4">텍스트 설명설명입니다</div>
-            </div>
+          <div className="text-center">
+            <span className="pb-1 w-full text-2xl italic font-thin">최근 포스트</span>
+          </div>
+          <div className="flex flex-wrap w-full justify-center">
+            {spl.map((gpldata) => (
+              <div key={gpldata.postDetail.id} className="w-full max-w-[600px]">
+                <a href={gpldata.postAbstract.url} className="w-full">
+                  <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
+                    <img className="object-cover h-full w-full rounded-3xl" src='/posts/공사중.png' alt="postImg"/>
+                    <div className="text-3xl pl-3 pt-3">{gpldata.postDetail.title}</div>
+                    <div className="text-sm text-zinc-400 pl-3 pt-1">{gpldata.postDetail.desc}</div>
+                    <div className="text-right text-zinc-400">
+                      {gpldata.postDetail.date &&
+                      <>
+                        <span className="text-sm">{gpldata.postDetail.date.toISOString().split('T')[0]}</span>
+                        <span className="ml-2 text-xs font-thin">{gpldata.postDetail.date.toISOString().split('T')[1].split('.')[0]}</span>
+                      </>
+                      }
+                    </div>
+                    <div className="absolute bg-zinc-900 z-10 w-full h-full opacity-0 rounded-3xl hover:opacity-75">
+                      <div className="m-4">텍스트 설명설명입니다</div>
+                    </div>
+                    <CategoryBadge value={gpldata.postAbstract.category}></CategoryBadge>
+                    <CategoryBadge sub={true} value={gpldata.postDetail.category}></CategoryBadge>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </li>
         <li className="mt-10 w-full h-full">

@@ -1,5 +1,4 @@
 import {getPostList} from "@/app/_utils/_lib/postParser";
-
 import CategoryBadge from "@/app/_common/CategoryBadge";
 import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
 
@@ -26,6 +25,14 @@ export default async function Posts({params}:{params:any}) {
                 <img className="object-cover h-full w-full rounded-3xl" src='/posts/공사중.png' alt="postImg"/>
                 <div className="text-3xl p-3">{gpldata.postDetail.title}</div>
                 <div className="text-sm text-zinc-400 p-2">{gpldata.postDetail.desc}</div>
+                <div className="text-right text-zinc-400">
+                  {gpldata.postDetail.date &&
+                  <>
+                    <span className="text-sm">{gpldata.postDetail.date.toISOString().split('T')[0]}</span>
+                    <span className="ml-2 text-xs font-thin">{gpldata.postDetail.date.toISOString().split('T')[1].split('.')[0]}</span>
+                  </>
+                  }
+                </div>
                 <div className="absolute bg-zinc-900 z-10 w-full h-full opacity-0 rounded-3xl hover:opacity-75">
                   <div className="m-4">텍스트 설명설명입니다</div>
                 </div>

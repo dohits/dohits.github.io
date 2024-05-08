@@ -5,6 +5,13 @@ import DropdownBtnIcon from "@/app/_icons/DropdownBtnIcon";
 import { useState } from "react";
 import Image from 'next/image';
 
+/** 
+ *  메뉴 추가시 menuData에 데이터 추가
+ *    menu_up_code === 'root'         =>   최상위 메뉴
+ *    menu_up_code === '상위메뉴코드'  =>   하위 메뉴
+ *  자동 바인딩
+ */
+
 function SidebarLeftComponent(){
 
   type MenuDataType = {

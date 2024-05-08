@@ -1,12 +1,17 @@
 "use client"
-
+import queryString from "@/app/_utils/queryString";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-
 /*function HeaderComponent({hamburgerOpen}:{hamburgerOpen:string}){*/
+
+export const nowPageParam = () => {
+  let param = queryString();
+  console.log(param);
+}
+
 function HeaderComponent(){
   const pathname = usePathname();
-
+  nowPageParam();
   return (
     <>
       <div className="z-10 sticky top-0 bg-zinc-950 flex items-center justify-between h-12 text-white px-4 lg:px-6 space-x-7 font-spoqa border-solid border-b-[1px] border-zinc-800">
