@@ -24,6 +24,17 @@ export async function generateStaticParams() {
   const result = gpl.map((gpldata) => ({
     post_category: gpldata.postAbstract.category ,
     post_title : gpldata.postAbstract.slug ,
+    // 로컬환경에서 테스트시 아래 주석 해제, github pages 는 url 자동인코딩되므로 위의 코드 사용
+    //post_category: encodeURI(gpldata.postAbstract.category || 'error') ,
+    //post_title : encodeURI(gpldata.postAbstract.slug || 'error') ,
   }));
+  console.log('result List ::: ');
+  console.log(result);
   return result;
 }  
+
+/* 
+    경로 생성 후 없는 경로로 진입시 
+    개발환경에서 error 뜨더라도 
+    배포시에는 정상적으로 not-found 페이지 진입됨.
+*/
