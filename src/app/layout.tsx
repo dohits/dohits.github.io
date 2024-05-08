@@ -6,6 +6,7 @@ import "@/app/_styles/font.css";
 import "@/app/_styles/animation.css";
 import "@/app/_styles/markdown.css";
 import "@/app/_styles/custom.css";
+import '@/interface/post';
 /* react-grid-layout --------------------------------*/
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";

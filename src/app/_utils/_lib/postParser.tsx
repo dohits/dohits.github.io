@@ -50,11 +50,36 @@ export const getPostPaths = (category?: string) => {
   return paths;
 };
 
+// 모든 글 가져오기
 export const getPostList = async (category?: string): Promise<post[]> => {
   const paths: string[] = getPostPaths(category);
   const posts = await Promise.all(paths.map((postPath) => parsePost(postPath)));
+
   return posts;
 };
+
+// 글 가져와서 시간순 정렬하기
+export const sortPostList = async (value?: string) => {
+  let result;
+  if (typeof value === 'string') {
+    result = await getPostList(value);
+  } else {
+    result = await getPostList();
+  }
+
+  // postDetail.date를 기준으로 정렬하기 위해 날짜를 Date 객체로 변환
+  result.forEach((post: any) => {
+    post.postDetail.date = new Date(post.postDetail.date);
+  });
+
+  // 최신글이 앞쪽 인덱스로 오도록 (내림차순)
+  result.sort((a: any, b: any) => {
+    return b.postDetail.date - a.postDetail.date;
+  });
+
+  return result;
+};
+
 
 export const getPostSlug = (category?: string) => {
   const folder = category || '**';
@@ -87,6 +112,11 @@ export async function selectPost (slug:string, category?:string) {
 // 렌더링
 export async function MarkdownRender ({content} : {content:any}){
   if (!content){return;}
+
+  let date = content.postDetail.date;
+  let dateString = date.toISOString().split('T')[0]; // "2024-02-23" 형식
+  let timeString = date.toISOString().split('T')[1].replace(".000Z", ""); // "13:53:22" 형식
+
   return (
     <>
       <div className='MARKDOWN_CONTAINER markdown-body !bg-zinc-950'>
@@ -94,7 +124,10 @@ export async function MarkdownRender ({content} : {content:any}){
           <div className='text-zinc-400 text-left text-xs italic'>{content.postAbstract.category} - {content.postDetail.category}</div>
           <div className='text-white text-center text-xl sm:text-4xl font-bold italic'>{content.postDetail.title}</div>
           <div className='text-zinc-400 text-center text-md italic'>{content.postDetail.desc}</div>
-          <div className='text-white flex justify-end'><MDXRemote source={content.postDetail.date}/></div>
+          <div className='text-white flex justify-end'>
+            <span className='text-sm'>{dateString}</span>
+            <span className='text-xs ml-2 content-center font-thin'>{timeString}</span>
+          </div>
         </div>
         <div className="text-white">
           <MDXRemote source={content.postDetail.content}/>

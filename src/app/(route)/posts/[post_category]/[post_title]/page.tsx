@@ -1,11 +1,9 @@
 
-import {getPostSlug, selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
-import {parsePostDetail, parsePost, parsePostAbstract,getPostPaths,getPostList} from "@/app/_utils/_lib/postParser";
+import {selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
+import {getPostList} from "@/app/_utils/_lib/postParser";
 
 export default async function Posts({params}:{params:any}) {
   const {post_category,post_title} = params;
-  console.log(post_category);
-  console.log(post_title);
   const postData = await selectPost(
                             decodeURI(post_title)
                             ,decodeURI(post_category));
@@ -28,8 +26,6 @@ export async function generateStaticParams() {
     //post_category: encodeURI(gpldata.postAbstract.category || 'error') ,
     //post_title : encodeURI(gpldata.postAbstract.slug || 'error') ,
   }));
-  console.log('result List ::: ');
-  console.log(result);
   return result;
 }  
 

@@ -7,7 +7,7 @@ interface post {
   postDetail : {
     id? : number;
     title?: string;
-    date?: string;
+    date?: Date;
     desc?: string;
     thumbnail? : string;
     content? : string;
