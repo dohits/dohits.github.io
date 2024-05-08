@@ -4,9 +4,9 @@ import CategoryBadge from "@/app/_common/CategoryBadge";
 import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
 
 export default async function Posts({params}:{params:any}) {
-  const category = params;
-  
-  let gpl_post = await getPostList(decodeURI(category.post_category));
+  const {post_category} = params;
+  const decode_category = decodeURI(post_category);
+  let gpl_post = await getPostList(decodeURI(post_category));
   let gpl_category = await getPostList();
 
   return (
@@ -16,7 +16,7 @@ export default async function Posts({params}:{params:any}) {
         <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
         <li className="p-2">조회순</li>
       </ul>
-      <CategoryComponents getPostList={gpl_category} category={category}/>
+      <CategoryComponents getPostList={gpl_category} category={decode_category}/>
       <div className="flex flex-wrap w-full justify-center">
         {gpl_post.map((gpldata) => (
           <div key={gpldata.postDetail.id}>
