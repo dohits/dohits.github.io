@@ -79,7 +79,7 @@ export default function About() {
           </li>
 
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- Api </div>
+            <div className="text-white text-xl font-bold">- Api </div> 
             <div className="flex flex-col space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl">
 
               <img className="w-28 rounded-md mt-2 ml-2" src={process.env.NEXT_PUBLIC_URL + '/badges/chatgptBadge.svg'} alt="chatgptBadge" />

@@ -1,24 +1,35 @@
-import {getPostList} from "@/app/_utils/_lib/postParser";
+import {getPostList, sortPostList} from "@/app/_utils/_lib/postParser";
 import CategoryBadge from "@/app/_common/CategoryBadge";
 import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
 
-export default async function Posts({params,searchParams}:{params:any,searchParams:any}) {
-  const {post_category} = params;
-  const decode_category = decodeURI(post_category);
-  let gpl_post = await getPostList(decode_category);
-  let gpl_category = await getPostList();
+export default async function allpost({page_start,page_size}:{page_start?:number,page_size?:number}){
+
+  let gpl = await getPostList();
+  let spl;
   
+  if(!page_start || !page_size){ 
+    spl = await sortPostList(1,3);
+  }else{ 
+    spl = await sortPostList(page_start,page_size); 
+  }
+  
+
   
   return (
-    <main className="flex flex-col justify-center w-full">
-      <div className="text-white text-4xl">Post</div>
-      <ul className="text-white flex mt-4 space-x-4">
-        <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
-        <li className="p-2">조회순</li>
-      </ul>
-      <CategoryComponents getPostList={gpl_category} category={decode_category}/>
+    <>
+      <div className="flex /*justify-end*/">
+        <CategoryComponents getPostList={gpl}/>
+      </div>
+{/**
+            // 소분류
+            <li className="flex flex-col">
+              {categories[majorCategory].map((minorCategory, index) => (
+                <span key={index} className="text-red-200">{minorCategory}</span>
+              ))}
+            </li>
+ */}
       <div className="flex flex-wrap w-full justify-center">
-        {gpl_post.map((gpldata) => (
+        {spl.map((gpldata) => (
           <div key={gpldata.postDetail.id} className="w-full max-w-[600px]">
             <a href={gpldata.postAbstract.url} className="w-full">
               <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
@@ -43,25 +54,25 @@ export default async function Posts({params,searchParams}:{params:any,searchPara
           </div>
         ))}
       </div>
-    </main>
+    </>
   );
 }
 
-export async function generateStaticParams() {
-  const gpl =  await getPostList();
-  const result = gpl.map((gpldata) => ({
-    post_category: gpldata.postAbstract.category ,
-    // 로컬환경에서 테스트시 아래 주석 해제, github pages 는 url 자동인코딩되므로 위의 코드 사용
-    //post_category: encodeURI(gpldata.postAbstract.category||'error') ,
-  }));
-  return result;
-}  
+/*
 
-/* 
-    경로 생성 후 없는 경로로 진입시 
-    개발환경에서 error 뜨더라도 
-    배포시에는 정상적으로 not-found 페이지 진입됨.
+interface post {
+  postAbstract : {
+    url?: string;
+    category?: string;
+    slug?: string;
+  };
+  postDetail : {
+    title?: string;
+    date?: string;
+    desc?: string;
+    thumbnail? : string;
+    content? : string;
+  };
+}
+
 */
-
-
-

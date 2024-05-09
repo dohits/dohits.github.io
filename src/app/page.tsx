@@ -2,7 +2,7 @@ import MainGridComponent from "@/app/_components/MainGridComponent"
 import {sortPostList} from "@/app/_utils/_lib/postParser";
 import CategoryBadge from "@/app/_common/CategoryBadge";
 
-export default async function Home() {
+export default async function Home({params}:{params:string}) {
 
   let spl = await sortPostList(1,1);
 
@@ -61,7 +61,7 @@ export default async function Home() {
                 <a href={gpldata.postAbstract.url} className="w-full">
                   <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
                     <img className="object-cover h-full w-full rounded-3xl" src='/posts/공사중.png' alt="postImg"/>
-                    <div className="text-3xl pl-3 pt-3">{gpldata.postDetail.title}</div>
+                    <div className="text-2xl pl-3 pt-3">{gpldata.postDetail.title}</div>
                     <div className="text-sm text-zinc-400 pl-3 pt-1">{gpldata.postDetail.desc}</div>
                     <div className="text-right text-zinc-400">
                       {gpldata.postDetail.date &&

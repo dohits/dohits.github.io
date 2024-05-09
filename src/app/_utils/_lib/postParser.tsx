@@ -58,7 +58,6 @@ export const getPostList = async (category?: string): Promise<post[]> => {
   return posts;
 };
 
-
 /** (x번째부터, x개, 카테고리) 시간순 정렬 */
 export const sortPostList = async (start: number, end: number, category?: string): Promise<post[]> => {
   let paths: string[] = getPostPaths(category);

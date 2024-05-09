@@ -19,8 +19,10 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    /* test 용*/
+    "target": "es6",
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/_error.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/_error.js", "src/app/_utils/QueryStringLib.js"],
   "exclude": ["node_modules"]
 }
