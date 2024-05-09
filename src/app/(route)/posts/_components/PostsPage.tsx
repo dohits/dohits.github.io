@@ -13,8 +13,6 @@ export default async function allpost({page_start,page_size}:{page_start?:number
     spl = await sortPostList(page_start,page_size); 
   }
   
-
-  
   return (
     <>
       <div className="flex /*justify-end*/">
