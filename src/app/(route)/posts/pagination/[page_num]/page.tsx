@@ -31,21 +31,29 @@ export default async function allpost({params}:{params:any}) {
 
   return (
     <>
-      <div className="text-white text-4xl">Post</div> 
-      <div className="w-full">
+      <div className="text-white text-4xl italic font-bold">Post</div> 
+      <div className="flex justify-end">
         <PaginationBtnComponents 
           pageArray={pagesArray} 
           pagination_size={pageViewConfig.pagination_size}
         />
+        </div>
+      <ul className="text-white flex mt-4 space-x-4">
+        <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
+        <li className="p-2">조회순</li>
+      </ul>
+      <div className="w-full">
         <Postspage 
           page_start={page_start} 
           page_size={pageViewConfig.page_size}
         />
       </div>
-      <PaginationBtnComponents 
-        pageArray={pagesArray} 
-        pagination_size={pageViewConfig.pagination_size}
-      />
+      <div className="mt-4">
+        <PaginationBtnComponents 
+          pageArray={pagesArray} 
+          pagination_size={pageViewConfig.pagination_size}
+        />
+      </div>
     </>
   );
 }
