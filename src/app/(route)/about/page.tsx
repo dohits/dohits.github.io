@@ -41,7 +41,7 @@ export default function About() {
           <li className="text-white text-4xl font-bold">- Skill
             <span className="text-sm font-thin text-white ml-3">{skillListOpen ? <>Close</> : <>Open</>}</span>
           </li>
-          {skillListOpen ? <SkillList/> : <></>}
+          <SkillList visible={skillListOpen}/>
         </ul>
       </div>
     </main>

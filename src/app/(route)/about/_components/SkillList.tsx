@@ -1,6 +1,10 @@
-export default function About() {
+export default function About({visible}:{visible:boolean}) {
+
+  const hideData = "hidden";
+  const visibleData = "";
+
   return (
-      <div>
+      <div className={visible ? visibleData : hideData }>
         <ul>
           <li>
             {/*<div className="text-white text-4xl font-bold">abcdefgasdf</div>*/}
