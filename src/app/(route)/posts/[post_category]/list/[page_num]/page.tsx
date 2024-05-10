@@ -63,9 +63,10 @@ export async function generateStaticParams() {
 export default async function allpost({params}:{params:any}) {
   
   const {page_num,post_category} = params;
-  console.log(post_category);
-  const pagesArray = await pageTotalCalc(post_category);
-  console.log(pagesArray);
+  const decodeCategory = decodeURI(post_category)
+  
+  const pagesArray = await pageTotalCalc(decodeCategory);
+  
   const page_start = 1 + (pageViewConfig.page_size * (page_num - 1));
 
   return (
