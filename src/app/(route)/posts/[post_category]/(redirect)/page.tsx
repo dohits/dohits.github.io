@@ -1,20 +1,9 @@
 import {getPostList} from "@/app/_utils/_lib/postParser";
-import Postspage from "@/app/(route)/posts/_components/PostsPage";
 import { redirect } from 'next/navigation';
-
+ 
 export default async function Posts({params}:{params:any}) {
   const {post_category} = params;
   redirect(`/posts/${post_category}/list/1`);
-  /*
-  return (
-    <>
-      <div className="text-white text-4xl italic font-bold">Post</div> 
-      <div className="w-full">
-        <Postspage post_category={post_category}/>
-      </div>
-    </>
-  );
-  */
 }
 
 export async function generateStaticParams() {

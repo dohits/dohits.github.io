@@ -27,9 +27,15 @@ export default function CategoryComponents({getPostList,category}:{getPostList:a
   const allpostCnt = getPostList.length;
            // 카테고리 핸들이벤트
   const HandleCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const pathUrl = "/posts"
+    const pathUrl = "/posts";
     const category = e.target.value;
-    router.push(`${pathUrl}/${category}`);
+
+    let mixUrl;
+    if(category==="" || category===undefined || category===null){
+      mixUrl = `${pathUrl}/list/1`;
+    }else{ mixUrl = `${pathUrl}/${category}/list/1`;}
+
+    router.push(mixUrl);
   };
 
   return (

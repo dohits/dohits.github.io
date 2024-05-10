@@ -34,7 +34,7 @@ export default async function allpost({
       </div>
       <ul className="text-white flex mt-4 space-x-4">
         <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
-        <li className="p-2">조회순</li>
+        <li className="p-2">오래된순</li>
       </ul>
       {children}
 {/**
@@ -53,7 +53,7 @@ export default async function allpost({
                 <img className="object-cover h-full w-full rounded-3xl" src='/posts/공사중.png' alt="postImg"/>
                 <div className="text-2xl pl-3 pt-3">{gpldata.postDetail.title}</div>
                 <div className="text-sm text-zinc-400 pl-3 pt-1">{gpldata.postDetail.desc}</div>
-                <div className="text-right text-zinc-400">
+                <div className="text-right text-zinc-400 mt-3">
                   {gpldata.postDetail.date &&
                   <>
                     <span className="text-sm">{gpldata.postDetail.date.toISOString().split('T')[0]}</span>
