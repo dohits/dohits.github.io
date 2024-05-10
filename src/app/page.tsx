@@ -27,7 +27,7 @@ export default async function Home({params}:{params:string}) {
           </a>
         </li>
         <li className="mt-4 text-white w-full flex justify-center space-x-3">
-          <a href="/" className="flex">
+          <a href="https://github.com/dohits" className="flex">
             <img className="h-8" alt="githubBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/githubBtn.svg'} />
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
@@ -37,15 +37,15 @@ export default async function Home({params}:{params:string}) {
           <a href="/" className="flex">
             <img className="h-8" alt="instagramBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/instagramBtn.svg'} />
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
-              <span className="relative -left-[8px] -bottom-[20px] inline-flex rounded-full h-3 w-3 bg-emerald-300"></span>
+              <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-zinc-500 opacity-75"></span>
+              <span className="relative -left-[8px] -bottom-[20px] inline-flex rounded-full h-3 w-3 bg-zinc-400"></span>
             </span>
           </a>
           <a href="/" className="flex">
             <img className="h-8" alt="youtubeBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/youtubeBtn.svg'} />
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
-              <span className="relative -left-[8px] -bottom-[20px] inline-flex rounded-full h-3 w-3 bg-emerald-300"></span>
+              <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-zinc-500 opacity-75"></span>
+              <span className="relative -left-[8px] -bottom-[20px] inline-flex rounded-full h-3 w-3 bg-zinc-400"></span>
             </span>
           </a>
         </li>
