@@ -32,17 +32,18 @@ export default async function allpost({params}:{params:any}) {
   return (
     <>
       <div className="text-white text-4xl italic font-bold">Post</div> 
-      <div className="flex justify-end">
-        <PaginationBtnComponents 
-          pageArray={pagesArray} 
-          pagination_size={pageViewConfig.pagination_size}
-        />
-        </div>
       <div className="w-full">
         <Postspage 
           page_start={page_start} 
           page_size={pageViewConfig.page_size}
-        />
+        >
+          <div className="flex justify-end">
+            <PaginationBtnComponents 
+              pageArray={pagesArray} 
+              pagination_size={pageViewConfig.pagination_size}
+            />
+          </div>
+        </Postspage>
       </div>
       <div className="mt-4">
         <PaginationBtnComponents 

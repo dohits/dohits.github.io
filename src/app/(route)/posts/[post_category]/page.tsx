@@ -1,23 +1,20 @@
 import {getPostList} from "@/app/_utils/_lib/postParser";
-import CategoryBadge from "@/app/_common/CategoryBadge";
-import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
 import Postspage from "@/app/(route)/posts/_components/PostsPage";
+import { redirect } from 'next/navigation';
 
-export default async function Posts({params,searchParams}:{params:any,searchParams:any}) {
+export default async function Posts({params}:{params:any}) {
   const {post_category} = params;
-  const decode_category = decodeURI(post_category);
-  let gpl_post = await getPostList(decode_category);
-  let gpl_category = await getPostList();
-  
-  
+  redirect(`/posts/${post_category}/list/1`);
+  /*
   return (
     <>
-      <div className="text-white text-4xl">Post</div>
+      <div className="text-white text-4xl italic font-bold">Post</div> 
       <div className="w-full">
         <Postspage post_category={post_category}/>
       </div>
     </>
   );
+  */
 }
 
 export async function generateStaticParams() {
