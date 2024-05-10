@@ -1,14 +1,30 @@
 
-export default function HistoryList(){
+export default function HistoryList({
+  title,
+  contents,
+  date
+}:{
+  title:string,
+  contents:string,
+  date:string,
+}){
   return(
     <>
-      <div className="text-white text-5xl">History</div>
-      <div className="mt-4 mb-4 bg-zinc-600 pt-4 pb-4 w-10 rounded-xl">
-        <div className="w-24 bg-zinc-800 border border-solid border-emerald-400 border-2 h-10 ml-2 rounded-3xl flex justify-center items-center text-xs text-white font-bold">
-          2024
+      <div className="bg-zinc-950 w-full rounded-xl flex">
+        <div className="text-white flex w-40 text-white pt-8 justify-center text-sm bg-zinc-800 pb-8 italic">
+          {date}
         </div>
-        <div className="mt-12 w-24 bg-zinc-800 border border-solid border-emerald-400 border-2 h-10 ml-2 rounded-3xl flex justify-center items-center text-xs text-white font-bold">
-          2024
+        <div className="text-white flex w-full text-white
+        border-l-8 border-emerald-400 border-solid pl-8 pt-6
+        ">
+          <div className="bg-zinc-950 min-w-10 w-10 h-10 relative -left-[55px] rounded-full 
+          border-emerald-400 border-solid border-4
+          ">
+          </div>
+          <ul>
+            <li className="text-xl zinc-100 text-wrap italic font-thin">{title}</li>
+            <li className="text-xs text-zinc-400 text-wrap font-thin">{contents}</li>
+          </ul>
         </div>
       </div>
     </>
