@@ -13,7 +13,8 @@ export default function PaginationBtnComponents({
 }){
 
   const pathName = usePathname();
-  const parts = pathName.split("/"); 
+  const decodePath = decodeURI(pathName);
+  const parts = decodePath.split("/"); 
   const pageNumber = parts[parts.length - 1]; // split 된 배열의 마지막 요소 추출
   const nonPageNumPath = parts.slice(0, -1).join("/"); // 페이지넘버를 제외한 패스
 
