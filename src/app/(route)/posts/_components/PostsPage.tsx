@@ -14,19 +14,23 @@ export default async function allpost({
 
   let gpl = await getPostList();
   let spl;
-  
+  let decode_category;
+
   if(!post_category){post_category="";}
+  if(post_category){decode_category = decodeURI(post_category);}
+  //let gpl_post = await getPostList(decode_category);
+
 
   if(!page_start || !page_size){ 
-    spl = await sortPostList(1, 3, post_category);
+    spl = await sortPostList(1, 3, decode_category);
   }else{ 
-    spl = await sortPostList(page_start, page_size, post_category); 
+    spl = await sortPostList(page_start, page_size, decode_category); 
   }
   
   return (
     <>
       <div className="flex /*justify-end*/">
-        <CategoryComponents getPostList={gpl} category={post_category}/>
+        <CategoryComponents getPostList={gpl} category={decode_category}/>
       </div>
       <ul className="text-white flex mt-4 space-x-4">
         <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
