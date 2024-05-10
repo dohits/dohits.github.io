@@ -20,7 +20,7 @@ export default async function allpost({
 
   if(!post_category){post_category="";}
   if(post_category){decode_category = decodeURI(post_category);}
-
+  
   if(!page_start || !page_size){ 
     spl = await sortPostList(1, 3, decode_category);
   }else{ 
@@ -37,14 +37,14 @@ export default async function allpost({
         <li className="p-2">오래된순</li>
       </ul>
       {children}
-{/**
-            // 소분류
-            <li className="flex flex-col">
-              {categories[majorCategory].map((minorCategory, index) => (
-                <span key={index} className="text-red-200">{minorCategory}</span>
-              ))}
-            </li>
- */}
+      {/**
+          // 소분류
+          <li className="flex flex-col">
+            {categories[majorCategory].map((minorCategory, index) => (
+              <span key={index} className="text-red-200">{minorCategory}</span>
+            ))}
+          </li>
+      */}
       <div className="flex flex-wrap w-full justify-center">
         {spl.map((gpldata) => (
           <div key={gpldata.postDetail.id} className="w-full max-w-[600px]">
