@@ -1,6 +1,7 @@
 import {getPostList} from "@/app/_utils/_lib/postParser";
 import CategoryBadge from "@/app/_common/CategoryBadge";
 import CategoryComponents from "@/app/(route)/posts/_components/CategoryComponents";
+import Postspage from "@/app/(route)/posts/_components/PostsPage";
 
 export default async function Posts({params,searchParams}:{params:any,searchParams:any}) {
   const {post_category} = params;
@@ -10,40 +11,12 @@ export default async function Posts({params,searchParams}:{params:any,searchPara
   
   
   return (
-    <main className="flex flex-col justify-center w-full">
+    <>
       <div className="text-white text-4xl">Post</div>
-      <ul className="text-white flex mt-4 space-x-4">
-        <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
-        <li className="p-2">조회순</li>
-      </ul>
-      <CategoryComponents getPostList={gpl_category} category={decode_category}/>
-      <div className="flex flex-wrap w-full justify-center">
-        {gpl_post.map((gpldata) => (
-          <div key={gpldata.postDetail.id} className="w-full max-w-[600px]">
-            <a href={gpldata.postAbstract.url} className="w-full">
-              <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
-                <img className="object-cover h-full w-full rounded-3xl" src='/posts/공사중.png' alt="postImg"/>
-                <div className="text-2xl pl-3 pt-3">{gpldata.postDetail.title}</div>
-                <div className="text-sm text-zinc-400 pl-3 pt-1">{gpldata.postDetail.desc}</div>
-                <div className="text-right text-zinc-400">
-                  {gpldata.postDetail.date &&
-                  <>
-                    <span className="text-sm">{gpldata.postDetail.date.toISOString().split('T')[0]}</span>
-                    <span className="ml-2 text-xs font-thin">{gpldata.postDetail.date.toISOString().split('T')[1].split('.')[0]}</span>
-                  </>
-                  }
-                </div>
-                <div className="absolute bg-zinc-900 z-10 w-full h-full opacity-0 rounded-3xl hover:opacity-75">
-                  <div className="m-4">텍스트 설명설명입니다</div>
-                </div>
-                <CategoryBadge value={gpldata.postAbstract.category}></CategoryBadge>
-                <CategoryBadge sub={true} value={gpldata.postDetail.category}></CategoryBadge>
-              </div>
-            </a>
-          </div>
-        ))}
+      <div className="w-full">
+        <Postspage post_category={post_category}/>
       </div>
-    </main>
+    </>
   );
 }
 

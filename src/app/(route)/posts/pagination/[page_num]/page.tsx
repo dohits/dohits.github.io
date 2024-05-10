@@ -38,10 +38,6 @@ export default async function allpost({params}:{params:any}) {
           pagination_size={pageViewConfig.pagination_size}
         />
         </div>
-      <ul className="text-white flex mt-4 space-x-4">
-        <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
-        <li className="p-2">조회순</li>
-      </ul>
       <div className="w-full">
         <Postspage 
           page_start={page_start} 
