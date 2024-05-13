@@ -18,6 +18,7 @@ import HeaderComponent from "./_components/HeaderComponent";
 import SidebarLeftComponent from "./_components/SideBarLeftComponent";
 import SidebarRightComponent from "./_components/SideBarRightComponent";
 import FooterComponent from "./_components/FooterComponent";
+import PageUpDownComponent from "./_components/PageUpDownComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,6 +58,7 @@ export default function RootLayout({
           <SidebarLeftComponent/>
             <div className="w-full overflow-y-scroll customScroll font-spoqa p-8">
               {children}
+              <PageUpDownComponent/>
               <FooterComponent/>
             </div>
           <SidebarRightComponent/>
