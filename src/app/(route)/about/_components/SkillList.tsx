@@ -13,7 +13,7 @@ export default function About({visible}:{visible:boolean}) {
           <li className="mt-4">
             <div className="text-white text-xl font-bold">- Languages</div>
             <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
-              <img className="h-full rounded-md mt-2 ml-2" src={process.env.NEXT_PUBLIC_URL + '/badges/css3Badge.svg'} alt="css3Badge" />
+              <img className="h-full rounded-md mt-2 ml-2" src={'/badges/css3Badge.svg'} alt="css3Badge" />
               <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/html5Badge.svg'} alt="html5Badge" />
               <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/javaBadge.svg'} alt="javaBadge" />
               <img className="h-full rounded-md" src={process.env.NEXT_PUBLIC_URL + '/badges/jsBadge.svg'} alt="jsBadge" />
