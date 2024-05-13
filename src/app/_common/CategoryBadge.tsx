@@ -10,9 +10,9 @@ export default function CategoryBadge(props: { style?: string, category?: string
   }
 
   
-  let badgeClass = `absolute top-4 left-4 z-[2] rounded-3xl ${style} `;
+  let badgeClass = `absolute top-4 left-4 z-[2] rounded-3xl ${style} border-2 border-white border-solid`;
   if(sub){
-    badgeClass = `absolute top-12 left-4 z-[2] rounded-3xl ${style} `
+    badgeClass = `absolute top-12 left-4 z-[2] rounded-3xl ${style} border-2 border-white border-solid`
   }
   // TODO ::: 카테고리 추가시 스타일 템플릿 작성
   if(category===null || category===undefined){

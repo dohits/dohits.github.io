@@ -33,10 +33,13 @@ export default function About() {
             <HistoryList unCircle={true} date="" title="국회와 국무총리" contents="국회는 국무총리 또는 국무위원의 해임을 대통령에게 건의할 수 있다. 비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로 할 수 있다. 다만, 사형을 선고한 경우에는 그러하지 아니하다."/>          
             <HistoryList date="" title="재판 권리" contents="모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다. 모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다."/>
             <HistoryList unCircle={true} date="" title="" contents="국회는 국무총리 또는 국무위원의 해임을 대통령에게 건의할 수 있다. 비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로 할 수 있다. 다만, 사형을 선고한 경우에는 그러하지 아니하다."/>          
-            <HistoryList contourLine="~ Now ( 5 Month ) "/>
+            <HistoryList contourLine="~6 M"/>
             <HistoryList date="2024.01" title="TechTree" contents="FullStack"/>
-            <HistoryList contourLine="3 Month"/>
             <HistoryList date="2023.11" title="EastWave" contents="FullStack"/>
+            <HistoryList date="2023.08" title="KOSMO" contents="FullStackEDU"/>
+            <HistoryList date="2023.03" title="KOSMO" contents="FullStackEDU"/>
+            <HistoryList date="2018.03" title="UNIV" contents="ComputerSystem"/>
+            <HistoryList date="2014.03" title="UNIV" contents="ComputerSystem"/>
           </>
           : <></>}
         </ul>
