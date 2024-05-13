@@ -115,11 +115,11 @@ export async function MarkdownRender ({content} : {content:any}){
   return (
     <>
       <div className='MARKDOWN_CONTAINER markdown-body !bg-zinc-950'>
-        <div className='border-solid border-b-2 border-emerald-400 m-[5px] sm:m-[50px]'>
+        <div className='border-solid border-b-2 border-emerald-400 pb-4 m-[5px] sm:m-[50px]'>
           <div className='text-zinc-400 text-left text-xs italic'>{content.postAbstract.category} - {content.postDetail.category}</div>
-          <div className='text-white text-center text-xl sm:text-4xl font-bold italic'>{content.postDetail.title}</div>
+          <div className='text-white pt-4 text-center text-xl sm:text-4xl font-bold italic'>{content.postDetail.title}</div>
           <div className='text-zinc-400 text-center text-md italic'>{content.postDetail.desc}</div>
-          <div className='text-white flex justify-end'>
+          <div className='text-white flex justify-end pt-2'>
             <span className='text-sm'>{dateString}</span>
             <span className='text-xs ml-2 content-center font-thin'>{timeString}</span>
           </div>
