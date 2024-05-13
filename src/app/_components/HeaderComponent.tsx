@@ -25,11 +25,9 @@ function HeaderComponent(){
         {/* Right Section ------------------------------------------------------------------------------------------------------------*/}
         <ul className="flex items-center w-full h-full justify-end">
           <li className="hidden md:flex items-center space-x-7 font-light">
-            <div className="text-emerald-300">Post</div>
-            <div>Project</div>
-            <div>About</div>
-            <div>Contact</div>
-            <div>Comments</div>
+            <Link href="/posts/list/1"><div className="text-zinc-300">Post</div></Link>
+            <Link href="/about"><div className="text-zinc-300">About</div></Link>
+            <Link href="/comment"><div className="text-zinc-300">Comments</div></Link>
           </li>
           <li className="hidden md:hidden items-center space-x-3 h-full">
             <img className="min-w-5 w-5 h-full content-center" src={process.env.NEXT_PUBLIC_URL + '/icons/hamburgerBtn.svg'} alt="hambergerBtn" />
