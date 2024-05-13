@@ -1,15 +1,48 @@
 ---
 id: 202405131112
-title: "본 페이지는 NEXT14 기반으로 빌드 되었습니다."
+title: "블로드 빌드정보"
 date: 2024-05-13 11:13:22
-desc: 페이지 빌드정보
+desc: "사용 기술 및 레퍼런스"
 thumbnail: /thumbnail/IT/nextjs14.png
 category: "깃허브 블로그"
 ---
-# 빌드정보
-<div className="flex">
+### 빌드정보
+<div className="flex flex-wrap">
   ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
+  
   ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) 
+  
   ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+
   ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 </div>
+
+```
+github page(node-version): 20
+next.js : 14.2.2
+typescript: 5
+tailwindcss: 3.4.1
+```
+<hr/>
+
+### 설명
+Github Page 는 정적 웹페이지 호스팅 서비스로, <br/>본 사이트는 GitHub Actions 를 이용하여 빌드 되었습니다.
+
+NEXTJS 의 다이나믹 라우팅은 generateStaticParams 를 이용하여 사용 할 모든 URL를 먼저 빌드하는 형태로 처리 하였고, <br/> 포스팅은 별도의 서버를 운용하지 않는 관계로 github Repository 내부에 mdx 파일을 적재하고 렌더링하는 형태로 구현 되었습니다.
+
+상세한 코드는 github Repository 에 공개 게시되어 있습니다.
+>[Dohits Repository](https://github.com/dohits/dohits.github.io)
+
+<hr/>
+### 레퍼런스 사이트
+> (정현수님 블로그) 
+> [https://junghyeonsu.com/](https://junghyeonsu.com/)
+>
+> (김도형님 블로그) 
+> [https://www.d5br5.dev/blog](https://www.d5br5.dev/blog)
+>
+> (박영웅님 블로그)
+> [https://www.heropy.dev/](https://www.heropy.dev/)
+<hr/>
+### Live
+2024-05-13 ~
