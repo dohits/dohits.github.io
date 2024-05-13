@@ -71,9 +71,7 @@ export default async function Home({params}:{params:string}) {
                       </>
                       }
                     </div>
-                    <div className="absolute bg-zinc-900 z-10 w-full h-full opacity-0 rounded-3xl hover:opacity-75">
-                      <div className="m-4">텍스트 설명설명입니다</div>
-                    </div>
+                    <div className="absolute bg-zinc-900 z-10 w-full h-full opacity-0 rounded-3xl hover:opacity-75"></div>
                     <CategoryBadge value={gpldata.postAbstract.category}></CategoryBadge>
                     <CategoryBadge sub={true} value={gpldata.postDetail.category}></CategoryBadge>
                   </div>

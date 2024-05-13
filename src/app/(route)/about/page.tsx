@@ -5,7 +5,7 @@ import { useState } from "react";
 import HistoryList from "./_components/HistoryList";
 export default function About() {
 
-  const [skillListOpen,setSkillListOpen] = useState(false);
+  const [skillListOpen,setSkillListOpen] = useState(true);
   const [HistoryListOpen,setHistoryListOpen] = useState(true);
 
   const handleSkillOpen = () => {
