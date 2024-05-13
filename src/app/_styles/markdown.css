@@ -1,6 +1,9 @@
 .MARKDOWN_CONTAINER{
   font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important;
-  
+}
+.MARKDOWN_CONTAINER .language-text{
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif' !important;
+  font-weight: 400;
 }
 
 .MARKDOWN_CONTAINER h1,h2,h3 {
@@ -10,4 +13,3 @@
 .MARKDOWN_CONTAINER pre{
   background: #f6f8faf0 !important;
 }
-
