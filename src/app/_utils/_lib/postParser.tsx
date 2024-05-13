@@ -2,7 +2,11 @@ import fs from 'fs';
 import path,{basename} from 'path';
 import matter from 'gray-matter';
 import { sync } from 'glob';
+
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+
 import "github-markdown-css";
 
 const BASE_PATH = "/_data/_posts";
@@ -124,8 +128,17 @@ export async function MarkdownRender ({content} : {content:any}){
             <span className='text-xs ml-2 content-center font-thin'>{timeString}</span>
           </div>
         </div>
-        <div className="text-white">
-          <MDXRemote source={content.postDetail.content}/>
+        <div className="text-white" id='markdownPost'>
+          <MDXRemote source={content.postDetail.content} 
+                      options={{
+                        mdxOptions: {
+                          rehypePlugins: [
+                            rehypeSlug, // rehypeSlug << 자동으로 h태그에 ID부여해주는 플러그인
+                            rehypeAutolinkHeadings,
+                          ],
+                        }
+                      }}
+          />
         </div>
       </div>
     </>

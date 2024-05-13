@@ -32,6 +32,40 @@
   }
 }
 
+
+.anime-toc-select {
+  animation: tocselect 0.2s ease-in-out forwards;
+}
+
+.anime-toc-nonselect {
+  animation: tocnonselect 0.2s ease-in-out forwards;
+}
+@keyframes tocselect {
+  0% {
+    background: none;
+  }
+  100% {
+    background: #34D399;
+    scale:1.2;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+}
+@keyframes tocnonselect {
+  0% {
+    background: #34D399;
+    scale:1.2;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+  100% {
+    background: none;
+    scale:1;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+}
+
 /*---------------- 글리치 애니메이션 -------------------*/
 
 .glitch-wrapper {
