@@ -33,10 +33,8 @@ function SidebarLeftComponent(){
     { id: '2', menu_code: 'posts', menu_up_code: 'root', name: 'Posts', path: '/posts' },
     { id: '201', menu_code: 'postall', menu_up_code: 'posts', name: '전체글보기', path: '/posts/list/1' },
     { id: '202', menu_code: 'postIT', menu_up_code: 'posts', name: 'IT', path: '/posts/IT/list/1' },
-    { id: '3', menu_code: 'project', menu_up_code: 'root', name: 'Projext(미구현)', path: '/project' },
-    { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About(TODO::디테일)', path: '/about' },
-    { id: '5', menu_code: 'contact', menu_up_code: 'root', name: 'Contact(미구현)', path: '/contact' },
-    { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment(TODO::디자인개선)', path: '/comment' },
+    { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About(공사중)', path: '/about' },
+    { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment', path: '/comment' },
   ];
 
   const buildMenuTree = (menuData: MenuDataType[]) => {
