@@ -1,4 +1,3 @@
-
 import Postspage from "@/app/(route)/posts/_components/PostsPage";
 import PaginationBtnComponents from "@/app/(route)/posts/_components/PaginationBtnComponents";
 import {getPostList} from "@/app/_utils/_lib/postParser";
@@ -36,13 +35,20 @@ export default async function allpost({params}:{params:any}) {
         <Postspage 
           page_start={page_start} 
           page_size={pageViewConfig.page_size}
+          old_sort={false}
         >
-          <div className="flex justify-end">
-            <PaginationBtnComponents 
-              pageArray={pagesArray} 
-              pagination_size={pageViewConfig.pagination_size}
-            />
-          </div>
+          <>
+            <ul className="text-white flex mt-4 space-x-4">
+              <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
+              <li className="p-2">오래된순</li>
+            </ul>
+            <div className="flex justify-end">
+              <PaginationBtnComponents 
+                pageArray={pagesArray} 
+                pagination_size={pageViewConfig.pagination_size}
+              />
+            </div>
+          </>
         </Postspage>
       </div>
       <div className="mt-4">

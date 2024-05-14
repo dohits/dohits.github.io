@@ -6,11 +6,13 @@ export default async function allpost({
   page_start,
   page_size,
   post_category,
+  old_sort,
   children,
 }:{
   page_start?:number,
   page_size?:number,
   post_category?:string,
+  old_sort?:boolean,
   children?: React.ReactElement
 }){
 
@@ -22,9 +24,9 @@ export default async function allpost({
   if(post_category){decode_category = decodeURI(post_category);}
   
   if(!page_start || !page_size){ 
-    spl = await sortPostList(1, 3, decode_category);
+    spl = await sortPostList(1, 3, decode_category,old_sort);
   }else{ 
-    spl = await sortPostList(page_start, page_size, decode_category); 
+    spl = await sortPostList(page_start, page_size, decode_category,old_sort); 
   }
   
   return (
@@ -32,10 +34,6 @@ export default async function allpost({
       <div className="flex /*justify-end*/">
         <CategoryComponents getPostList={gpl} category={decode_category}/>
       </div>
-      <ul className="text-white flex mt-4 space-x-4">
-        <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
-        <li className="p-2">오래된순</li>
-      </ul>
       {children}
       {/**
           // 소분류

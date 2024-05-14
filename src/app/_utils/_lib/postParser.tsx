@@ -63,7 +63,7 @@ export const getPostList = async (category?: string): Promise<post[]> => {
 };
 
 /** (x번째부터, x개, 카테고리) 시간순 정렬 */
-export const sortPostList = async (start: number, end: number, category?: string): Promise<post[]> => {
+export const sortPostList = async (start: number, end: number, category?: string ,oldsort?: boolean): Promise<post[]> => {
   let paths: string[] = getPostPaths(category);
   let posts: post[] = await Promise.all(paths.map((postPath) => parsePost(postPath)));
 
@@ -71,7 +71,8 @@ export const sortPostList = async (start: number, end: number, category?: string
   posts.sort((a: any, b: any) => {
     const dateA = new Date(a.postDetail.date);
     const dateB = new Date(b.postDetail.date);
-    return dateB.getTime() - dateA.getTime();
+    if(oldsort===true){console.log('오랜순 정렬');return dateA.getTime() - dateB.getTime();}
+    else{console.log('최신순 정렬');return dateB.getTime() - dateA.getTime();}
   });
 
   // x번째부터 y개의 글만 반환
