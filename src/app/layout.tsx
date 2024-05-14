@@ -55,7 +55,7 @@ export default function RootLayout({
         <HeaderComponent/>
         <div className="dark-mode flex w-full justify-between bg-zinc-950 h-[92vh] overflow-hidden">
           <SidebarLeftComponent/>
-            <div className="w-full overflow-y-scroll customScroll font-spoqa p-8">
+            <div className="w-full overflow-y-scroll customScroll font-spoqa p-8 scroll-smooth" id="bodyContents">
               {children}
               <FooterComponent/>
             </div>

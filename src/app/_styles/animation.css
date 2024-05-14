@@ -32,31 +32,34 @@
   }
 }
 
-
+/* 우측 TOC메뉴 감시 애니메이션 */
 .anime-toc-select {
   animation: tocselect 0.2s ease-in-out forwards;
 }
 
 .anime-toc-nonselect {
-  animation: tocnonselect 0.2s ease-in-out forwards;
+  animation: tocnonselect 0.4s ease-in-out forwards;
 }
 @keyframes tocselect {
   0% {
     background: none;
   }
   100% {
-    background: #34D399;
+    background: #8ae8c6;
+    border-left:#34D399 solid 8px;
     scale:1.2;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
   }
 }
+
 @keyframes tocnonselect {
   0% {
-    background: #34D399;
+    background: #8ae8c6;
     scale:1.2;
-    margin-bottom: 16px;
-    margin-top: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
   100% {
     background: none;

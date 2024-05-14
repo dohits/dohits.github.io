@@ -1,7 +1,9 @@
 # In progress of development.
 
-### 빌드정보
 <hr/>
+
+## 빌드정보
+
 <div className="flex flex-wrap">
 
   ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
@@ -22,7 +24,5 @@ tailwindcss: 3.4.1
 ```
 
 ## LIVE
-
-<hr/>
 
 [dohits.github.io](https://dohits.github.io)

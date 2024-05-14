@@ -121,7 +121,7 @@ export async function MarkdownRender ({content} : {content:any}){
       <div className='MARKDOWN_CONTAINER markdown-body !bg-zinc-950'>
         <div className='border-solid border-b-2 border-emerald-400 pb-4 flex flex-col'>
           <div className='text-zinc-400 sm:pt-0 pt-4 sm:text-center text-left text-xs italic'>{content.postAbstract.category} - {content.postDetail.category}</div>
-          <div className='text-white sm:pt-4 pt-0 sm:text-center text-left text-3xl sm:text-5xl font-bold italic'>{content.postDetail.title}</div>
+          <div className='text-white sm:pt-4 pt-0 sm:text-center text-left text-3xl sm:text-5xl font-bold italic' id="postTitle">{content.postDetail.title}</div>
           <div className='text-zinc-400 sm:text-center text-left text-md italic'>{content.postDetail.desc}</div>
           <div className='text-white flex justify-end pt-2'>
             <span className='text-sm'>{dateString}</span>
