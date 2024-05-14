@@ -16,11 +16,10 @@ function SidebarRightComponent(){
   const [activeHeadingId, setActiveHeadingId] = useState<string>('');
 
   useLayoutEffect(() => {
-    // html 요소 감지하여 배열에 저장
-    const headingElements = Array.from(
+    const tocArray = Array.from(
       document.querySelectorAll<HTMLElement>('#markdownPost > :is(h1, h2, h3)'),
     );
-    setHeadings(headingElements);
+    setHeadings(tocArray);
 
 
     // IntersectionObserver 생성
@@ -32,12 +31,12 @@ function SidebarRightComponent(){
       });
     }, {
       root: null,
-      rootMargin: '0px',
+      rootMargin: '0px 0px',
       threshold: 1
     });
 
     // 각 헤딩 요소를 감시
-    headingElements.forEach(heading => {
+    tocArray.forEach(heading => {
       observer.observe(heading);
     });
     // cleanup 함수
