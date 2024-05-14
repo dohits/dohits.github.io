@@ -61,7 +61,7 @@ export default async function Home({params}:{params:string}) {
                 <a href={gpldata.postAbstract.url} className="w-full">
                   <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
                     <img className="object-cover h-full w-full rounded-3xl border-2 border-white border-solid" src={gpldata.postDetail.thumbnail} alt="postImg"/>
-                    <div className="text-2xl pl-3 pt-3">{gpldata.postDetail.title}</div>
+                    <div className="text-lg pl-3 pt-3">{gpldata.postDetail.title}</div>
                     <div className="text-sm text-zinc-400 pl-3 pt-1">{gpldata.postDetail.desc}</div>
                     <div className="text-right text-zinc-400">
                       {gpldata.postDetail.date &&

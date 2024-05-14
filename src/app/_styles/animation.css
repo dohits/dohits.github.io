@@ -68,7 +68,17 @@
     margin-top: 0px;
   }
 }
-
+.anime-header-menu-hover:hover{
+  animation: headermenuhover 0.3s ease-in-out forwards;
+}
+@keyframes headermenuhover {
+  0% {
+    background: #09090B;
+  }
+  100% {
+    background: #68686b;
+  }
+}
 /*---------------- 글리치 애니메이션 -------------------*/
 
 .glitch-wrapper {
