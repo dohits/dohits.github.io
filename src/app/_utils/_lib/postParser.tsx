@@ -71,8 +71,8 @@ export const sortPostList = async (start: number, end: number, category?: string
   posts.sort((a: any, b: any) => {
     const dateA = new Date(a.postDetail.date);
     const dateB = new Date(b.postDetail.date);
-    if(oldsort===true){console.log('오랜순 정렬');return dateA.getTime() - dateB.getTime();}
-    else{console.log('최신순 정렬');return dateB.getTime() - dateA.getTime();}
+    if(oldsort===true){return dateA.getTime() - dateB.getTime();}
+    else{return dateB.getTime() - dateA.getTime();}
   });
 
   // x번째부터 y개의 글만 반환

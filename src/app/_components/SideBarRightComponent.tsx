@@ -5,7 +5,7 @@ import { useState, useLayoutEffect, useEffect } from "react";
 
 
 // 페이지 첫진입시 지저분하게 렌더링되는 현상 개선 필요 (우선순위 낮음)
-// 
+// Toc 클릭시 해당부분 점멸하는 로직 구현 (우선순위 낮음)
 
 function SidebarRightComponent(){
   // 사이드바 오픈상태
@@ -69,8 +69,6 @@ function SidebarRightComponent(){
     };
 
   }, []);
-  
-
 
 return (
   <>

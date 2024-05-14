@@ -6,13 +6,13 @@ export default async function allpost({
   page_start,
   page_size,
   post_category,
-  old_sort,
+  //old_sort,
   children,
 }:{
   page_start?:number,
   page_size?:number,
   post_category?:string,
-  old_sort?:boolean,
+  //old_sort?:boolean,
   children?: React.ReactElement
 }){
 
@@ -24,9 +24,9 @@ export default async function allpost({
   if(post_category){decode_category = decodeURI(post_category);}
   
   if(!page_start || !page_size){ 
-    spl = await sortPostList(1, 3, decode_category,old_sort);
+    spl = await sortPostList(1, 3, decode_category,/*old_sort*/);
   }else{ 
-    spl = await sortPostList(page_start, page_size, decode_category,old_sort); 
+    spl = await sortPostList(page_start, page_size, decode_category,/*old_sort*/); 
   }
   
   return (
@@ -43,6 +43,7 @@ export default async function allpost({
             ))}
           </li>
       */}
+      
       <div className="flex flex-wrap w-full justify-center">
         {spl.map((gpldata) => (
           <div key={gpldata.postDetail.id} className="w-full max-w-[600px]">

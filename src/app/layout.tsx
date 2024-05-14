@@ -12,8 +12,6 @@ import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
 /*-------------------------------- react-grid-layout */
 
-
-
 import HeaderComponent from "./_components/HeaderComponent";
 import SidebarLeftComponent from "./_components/SideBarLeftComponent";
 import SidebarRightComponent from "./_components/SideBarRightComponent";

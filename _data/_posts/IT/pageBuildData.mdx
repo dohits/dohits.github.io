@@ -27,9 +27,11 @@ tailwindcss: 3.4.1
 <hr/>
 
 ### 설명
-Github Page 는 정적 웹페이지 호스팅 서비스로, <br/>본 사이트는 GitHub Actions 를 이용하여 빌드 되었습니다.
+Github Page 는 정적 웹페이지 호스팅 서비스로, SSG(Static Site Generation) 방식의 배포만을 허용하고 있습니다. 
+<br/> 이에 따라, NEXTJS 의 다이나믹 라우팅은 generateStaticParams 를 활용하여 사용 할 모든 URL를 먼저 제공하는 형태로
+<br/>GitHub Actions 를 이용하여 빌드 되었습니다.
 
-NEXTJS 의 다이나믹 라우팅은 generateStaticParams 를 이용하여 사용 할 모든 URL를 먼저 빌드하는 형태로 처리 하였고, <br/> 포스팅은 별도의 서버를 운용하지 않는 관계로 Github Repository 내부에 mdx 파일을 적재하고 렌더링하는 형태로 구현 되었습니다.
+ <br/> 포스팅은 별도의 서버를 운용하지 않는 관계로 Github Repository 내부에 mdx 파일을 적재하고 렌더링하는 형태로 구현 되었습니다.
 
 상세 코드는 Github Repository 에 공개 게시되어 있습니다.
 >[Dohits Repository](https://github.com/dohits/dohits.github.io)
