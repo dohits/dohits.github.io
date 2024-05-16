@@ -93,7 +93,6 @@
 .glitch {
   position: relative;
   font-weight: bold;
-  color:white;
   letter-spacing: 3px;
   z-index: 1;
 }

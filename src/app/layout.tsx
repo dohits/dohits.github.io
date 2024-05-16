@@ -30,6 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  
   return (
     <html lang="ko">
       {/* Google Tag Manager 스크립트 [google analytics] */}
@@ -51,7 +52,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <HeaderComponent/>
-        <div className="dark-mode flex w-full justify-between bg-zinc-950 h-[92vh] overflow-hidden">
+        <div className="dark:bg-zinc-950
+                        flex w-full justify-between bg-white h-[94vh] overflow-hidden">
           <SidebarLeftComponent/>
             <div className="w-full overflow-y-scroll customScroll font-spoqa pt-8 p-4 sm:p-8 scroll-smooth" id="bodyContents">
               {children}

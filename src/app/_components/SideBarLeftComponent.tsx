@@ -29,7 +29,7 @@ function SidebarLeftComponent(){
   }
 
   const menuData:MenuDataType[] = [
-    { id: '1', menu_code: 'home', menu_up_code: 'root', name: '홈', path: '/' },
+    { id: '1', menu_code: 'home', menu_up_code: 'root', name: 'Home', path: '/' },
     { id: '2', menu_code: 'posts', menu_up_code: 'root', name: 'Posts', path: '/posts' },
     { id: '201', menu_code: 'postall', menu_up_code: 'posts', name: '전체글보기', path: '/posts/list/1' },
     { id: '202', menu_code: 'postIT', menu_up_code: 'posts', name: 'IT', path: '/posts/IT/list/1' },
@@ -48,7 +48,7 @@ function SidebarLeftComponent(){
         }
       }
     });
-  
+    
     return menuTree;
   };
   
@@ -62,13 +62,14 @@ function SidebarLeftComponent(){
       <>
         <div className="z-10 fixed md:sticky bg-zinc-950 pl-3 md:pl-0 h-full w-full max-w-[250px] font-spoqa overflow-y-scroll customScroll anime-lr-move z-[99]">
           <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
+            {/**
             <ul className="flex justify-center h-10 w-full place-content-center rounded-lg">
               <li className="content-center w-full">
                 <p className="text-[12px] text-white font-thin">profile open</p>
                 <p className="text-2xl text-emerald-200 font-bold">this is profile</p>
                 <div className="bg-emerald-200 h-[1px] w-full"></div>
               </li>
-            </ul>
+            </ul> */}
             {/* 최상위 메뉴 ---------------------------------- */}
             {Object.values(menuTree).map((menu) => (
               <ul key={menu.id} className="mt-1 space-y-1">                             {/* path 일치시 해당 아코디언만 열리도록 */}

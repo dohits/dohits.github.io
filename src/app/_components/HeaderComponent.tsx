@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
+import DarkModeBtn from "../_common/DarkModeBtn";
 /*function HeaderComponent({hamburgerOpen}:{hamburgerOpen:string}){*/
 
 function HeaderComponent(){
@@ -40,7 +41,8 @@ function HeaderComponent(){
 
   return (
     <>
-      <div className="z-10 sticky top-0 bg-zinc-950 flex items-center justify-between h-12 text-white px-4 lg:px-6 space-x-7 font-spoqa border-solid border-b-[1px] border-zinc-800">
+      <div className="dark:bg-zinc-950 dark:text-zinc-100
+                       bg-white text-zinc-900 z-10 sticky top-0 flex items-center justify-between h-12 px-4 lg:px-6 space-x-7 font-spoqa">
         {/* Left Section ------------------------------------------------------------------------------------------------------------*/}
         <ul className="h-full w-full">
           <div className="h-full w-full">
@@ -57,19 +59,22 @@ function HeaderComponent(){
         </ul>
         {/* Right Section ------------------------------------------------------------------------------------------------------------*/}
         <ul className="flex items-center w-full h-full justify-end">
-        <li className="hidden md:flex items-center space-x-7 font-light h-full">
+          <li className="hidden md:flex items-center space-x-7 h-full">
           {Object.values(menuTree).map((menu) => (
                 <Link key={menu.id} href={menu.path} className={menu.path === pathname ?
                   "h-full min-w-10 border-b-2 border-solid border-emerald-400 pl-3 pr-3"
-                  : "h-full min-w-10 border-b-2 border-solid border-zinc-900 anime-header-menu-hover pl-3 pr-3"}
+                  : "h-full min-w-10 anime-header-menu-hover pl-3 pr-3"}
                 >
-                  <div className="text-zinc-300 w-full h-full flex items-center justify-center whitespace-nowrap">{menu.name}</div>
+                  <div className="w-full h-full flex items-center justify-center whitespace-nowrap font-medium">{menu.name}</div>
                 </Link>
           ))}
           </li>
           <li className="hidden md:hidden items-center space-x-3 h-full">
             <img className="min-w-5 w-5 h-full content-center" src={process.env.NEXT_PUBLIC_URL + '/icons/hamburgerBtn.svg'} alt="hambergerBtn" />
-            <span className="font-light text-sm font-bold h-full content-center">Menu</span>
+            <span className="text-sm font-bold h-full content-center">Menu</span>
+          </li>
+          <li className="h-full items-center flex ml-4">
+            <DarkModeBtn/>
           </li>
         </ul>
       </div>

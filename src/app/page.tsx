@@ -11,38 +11,44 @@ export default async function Home({params}:{params:string}) {
       <ul className="flex flex-col text-center w-full">
         <li className="glitch-wrapper flex flex-col mt-12">
           <div className="anime-hideview">
-            <div className="glitch text-white italic font-bigShouldersStencil !text-xl sm:!text-4xl" data-text="github.io">
+            <div className="dark:text-white
+                            glitch italic font-bigShouldersStencil !text-xl sm:!text-4xl" data-text="github.io">
               github.io
             </div>
           </div>
           <div className="anime-hideview">
-            <div className="glitch text-white italic font-bigShouldersStencil !text-6xl sm:!text-8xl" data-text="dohits">
+            <div className="dark:text-white
+                            glitch italic font-bigShouldersStencil !text-6xl sm:!text-8xl" data-text="dohits">
               dohits
             </div>
           </div>
         </li>
         <li className="mt-4 text-white w-full flex justify-center">
           <a href="https://hits.sh/dohits.github.io/">
-            <img className="max-w-60 w-full" alt="Hits" src="https://hits.sh/dohits.github.io.svg?view=today-total&style=for-the-badge&label=visitors&color=09090B&labelColor=09090B&logo=github"/>
+            <img className="dark:invert-0
+                            invert max-w-60 w-full rounded-3xl" alt="Hits" src="https://hits.sh/dohits.github.io.svg?view=today-total&style=for-the-badge&label=visitors&color=000000&labelColor=000000&logo=github"/>
           </a>
         </li>
         <li className="mt-4 text-white w-full flex justify-center space-x-3">
           <a href="https://github.com/dohits" className="flex">
-            <img className="h-8" alt="githubBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/githubBtn.svg'} />
+            <img className="dark:invert-0 
+                            invert h-8" alt="githubBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/githubBtn.svg'} />
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
               <span className="relative -left-[8px] -bottom-[20px] inline-flex rounded-full h-3 w-3 bg-emerald-300"></span>
             </span>
           </a>
           <a href="/" className="flex">
-            <img className="h-8" alt="instagramBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/instagramBtn.svg'} />
+            <img className="dark:invert-0
+                            invert h-8" alt="instagramBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/instagramBtn.svg'} />
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-zinc-500 opacity-75"></span>
               <span className="relative -left-[8px] -bottom-[20px] inline-flex rounded-full h-3 w-3 bg-zinc-400"></span>
             </span>
           </a>
           <a href="/" className="flex">
-            <img className="h-8" alt="youtubeBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/youtubeBtn.svg'} />
+            <img className="dark:invert-0
+                            invert h-8" alt="youtubeBtn" src={process.env.NEXT_PUBLIC_URL + '/icons/youtubeBtn.svg'} />
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute -left-[8px] -bottom-[20px] inline-flex h-full w-full rounded-full bg-zinc-500 opacity-75"></span>
               <span className="relative -left-[8px] -bottom-[20px] inline-flex rounded-full h-3 w-3 bg-zinc-400"></span>
@@ -51,9 +57,10 @@ export default async function Home({params}:{params:string}) {
         </li>
       </ul>
       <ul>
-        <li className="mt-10 w-full h-full text-white">
+        <li className="dark:text-white
+                       mt-10 w-full h-full">
           <div className="text-center">
-            <span className="pb-1 w-full text-2xl italic font-thin">최근 포스트</span>
+            <span className="pb-1 w-full text-2xl italic font-light">최근 포스트</span>
           </div>
           <div className="flex flex-wrap w-full justify-center">
             {spl.map((gpldata) => (
@@ -61,7 +68,8 @@ export default async function Home({params}:{params:string}) {
                 <a href={gpldata.postAbstract.url} className="w-full">
                   <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
                     <img className="object-cover h-full w-full rounded-3xl border-2 border-white border-solid" src={gpldata.postDetail.thumbnail} alt="postImg"/>
-                    <div className="text-lg pl-3 pt-3">{gpldata.postDetail.title}</div>
+                    <div className="dark:text-white
+                                    text-zinc-950 text-lg pl-3 pt-3">{gpldata.postDetail.title}</div>
                     <div className="text-sm text-zinc-400 pl-3 pt-1">{gpldata.postDetail.desc}</div>
                     <div className="text-right text-zinc-400">
                       {gpldata.postDetail.date &&

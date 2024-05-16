@@ -1,7 +1,5 @@
 # In progress of development.
 
-<hr/>
-
 ## 빌드정보
 
 <div className="flex flex-wrap">

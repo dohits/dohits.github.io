@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useLayoutEffect, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 
 
 // 페이지 첫진입시 지저분하게 렌더링되는 현상 개선 필요 (우선순위 낮음)
@@ -102,9 +102,16 @@ return (
           :
           <>
             <li className="text-white w-full text-center"> 
-              <div>Google ads & POST Toc 영역</div>
-              <div className="mt-6 h-[260px] bg-zinc-800 w-full rounded-3xl"></div>
-              <div className="mt-6 h-[260px] bg-zinc-700 w-full rounded-3xl"></div>
+              <div className="mb-6">Google ads & POST Toc 영역 _ 임시</div>
+              <div className="mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
+                <iframe src="https://giphy.com/embed/bGgsc5mWoryfgKBx1u" width="100%" height="100%" frameBorder="0" className="giphy-embed rounded-3xl" allowFullScreen></iframe>
+              </div>
+              <div className="mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
+                <iframe src="https://giphy.com/embed/qgQUggAC3Pfv687qPC" width="100%" height="100%" frameBorder="0" className="giphy-embed rounded-3xl" allowFullScreen></iframe>
+              </div>
+              <div className="mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
+                <iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" width="100%" height="100%" frameBorder="0" className="giphy-embed rounded-3xl" allowFullScreen></iframe>
+              </div>
               <div className="mt-6 h-[260px] bg-zinc-600 w-full rounded-3xl"></div>
             </li>
           </>
