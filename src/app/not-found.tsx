@@ -11,7 +11,7 @@ const NotFound: NextPage = () => {
                             text-zinc-950 text-4xl mb-8 font-gamja-flower'>없는 페이지에요 !</span>
         </div>
         <img  className="dark:invert rounded-full w-[400px]"
-              src="/images/404image.svg"></img>
+              src="/images/404Image.svg"></img>
       </div>
     </>
   )
