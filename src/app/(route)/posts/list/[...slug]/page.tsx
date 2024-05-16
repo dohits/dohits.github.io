@@ -55,7 +55,8 @@ export default async function allpost({
   */
   return (
     <>
-      <div className="text-white text-4xl italic font-bold">Post</div> 
+      <div className="dark:text-white 
+                      text-zinc-950 text-4xl italic font-bold">Post</div> 
       <div className="w-full">
       <PostSort>
         <Postspage 

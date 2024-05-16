@@ -40,7 +40,7 @@ export default function CategoryComponents({getPostList,category}:{getPostList:a
 
   return (
     <> {/** ul li 로 변경하여 재디자인 할것 */}
-      <div className='mt-4 /*text-center*/'>
+      <div className='mt-4 border border-solid rounded-3xl'>
         <select className="p-2 rounded-3xl font-spoqa text-xs" name="categoryLinker" onChange={HandleCategory} value={category}>
           <option key="all" value="" className='h-10'>전체 글 &#40;{allpostCnt}&#41;</option>
           {Object.keys(categories).map((majorCategory) => (

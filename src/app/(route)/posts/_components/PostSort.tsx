@@ -8,7 +8,7 @@ export default function PostSort({children}:{children?: React.ReactElement}){
   }
   return(
     <>
-    <ul className="text-white flex mt-4 space-x-4">
+    <ul className="hidden text-white flex mt-4 space-x-4">
       <Link href="1#@sortNew" onClick={handleGongSaJung}>
         <li className="p-2 border-b-2 border-emerald-400 border-solid">최신순</li>
       </Link>

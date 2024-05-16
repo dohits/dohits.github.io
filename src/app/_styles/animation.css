@@ -68,15 +68,30 @@
     margin-top: 0px;
   }
 }
-.anime-header-menu-hover:hover{
-  animation: headermenuhover 0.3s ease-in-out forwards;
+
+.dark .anime-header-menu-hover:hover{
+  animation: dark_headermenuhover 0.3s ease-in-out forwards;
+  border-radius: 12px;
 }
-@keyframes headermenuhover {
+@keyframes dark_headermenuhover {
   0% {
     background: #09090B;
   }
   100% {
     background: #68686b;
+  }
+}
+.light .anime-header-menu-hover:hover{
+  animation: light_headermenuhover 0.3s ease-in-out forwards;
+  border-radius: 12px;
+}
+@keyframes light_headermenuhover {
+  0% {
+    background: #FFFFFF;
+  }
+  100% {
+    background: #68686b;
+    color:white;
   }
 }
 /*---------------- 글리치 애니메이션 -------------------*/

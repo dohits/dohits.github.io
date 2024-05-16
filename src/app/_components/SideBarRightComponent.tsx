@@ -74,11 +74,13 @@ return (
   <>
   { openState ?
     <div className="z-10 sticky hidden lg:block h-full w-full max-w-[300px] font-spoqa overflow-y-scroll customScroll overflow-x-hidden">
-      <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
-        <ul className="text-white">
+      <div className="mt-8 px-4 py-4 rounded-3xl">
+        <ul className="dark:text-white
+                       text-zinc-950">
           { title ? 
           <>
-              { title && <li className="text-lg italic border-b-2 border-white border-solid mb-4 pb-1">{title}</li>}
+              { title && <li className="dark:border-white
+                                        border-zinc-400 text-lg italic border-b-[1px] border-solid mb-4 pb-1">{title}</li>}
               {headings.map((heading, index) => (
                 <li key={index} className="pb-1">
                   <Link href={`#${heading.id}`}>

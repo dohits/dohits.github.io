@@ -12,13 +12,13 @@ export default async function Home({params}:{params:string}) {
         <li className="glitch-wrapper flex flex-col mt-12">
           <div className="anime-hideview">
             <div className="dark:text-white
-                            glitch italic font-bigShouldersStencil !text-xl sm:!text-4xl" data-text="github.io">
+                            text-zinc-950 glitch italic font-bigShouldersStencil !text-xl sm:!text-4xl" data-text="github.io">
               github.io
             </div>
           </div>
           <div className="anime-hideview">
             <div className="dark:text-white
-                            glitch italic font-bigShouldersStencil !text-6xl sm:!text-8xl" data-text="dohits">
+                            text-zinc-950 glitch italic font-bigShouldersStencil !text-6xl sm:!text-8xl" data-text="dohits">
               dohits
             </div>
           </div>
@@ -58,7 +58,7 @@ export default async function Home({params}:{params:string}) {
       </ul>
       <ul>
         <li className="dark:text-white
-                       mt-10 w-full h-full">
+                      text-zinc-950 mt-10 w-full h-full">
           <div className="text-center">
             <span className="pb-1 w-full text-2xl italic font-light">최근 포스트</span>
           </div>
