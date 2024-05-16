@@ -102,17 +102,22 @@ return (
           :
           <>
             <li className="text-white w-full text-center"> 
-              <div className="mb-6">Google ads & POST Toc 영역 _ 임시</div>
-              <div className="mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
+              <div className="dark:text-white
+                              text-zinc-900 mb-6 text-2xl italic">준비된 Ads 가 없습니다</div>
+              <div className="dark:bg-white
+                              mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
                 <iframe src="https://giphy.com/embed/bGgsc5mWoryfgKBx1u" width="100%" height="100%" frameBorder="0" className="giphy-embed rounded-3xl" allowFullScreen></iframe>
               </div>
-              <div className="mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
+              <div className="dark:bg-white
+                              mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
                 <iframe src="https://giphy.com/embed/qgQUggAC3Pfv687qPC" width="100%" height="100%" frameBorder="0" className="giphy-embed rounded-3xl" allowFullScreen></iframe>
               </div>
-              <div className="mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
+              <div className="dark:bg-white
+                              mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
                 <iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" width="100%" height="100%" frameBorder="0" className="giphy-embed rounded-3xl" allowFullScreen></iframe>
               </div>
-              <div className="mt-6 h-[260px] bg-zinc-600 w-full rounded-3xl"></div>
+              <div className="dark:bg-white
+                              mt-6 h-[260px] bg-zinc-600 w-full rounded-3xl"></div>
             </li>
           </>
           }

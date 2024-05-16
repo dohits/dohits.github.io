@@ -1,7 +1,7 @@
 'use client'
 
 import React,{ useLayoutEffect, useState } from 'react';
-
+import { usePathname,useRouter } from 'next/navigation';
 interface TThemeButtonProps {}
 
 const LOCAL_STORAGE_KEY = {
@@ -14,7 +14,8 @@ const LOCAL_STORAGE_KEY = {
   } as const;
 
 const DarkModeBtn = ({}: TThemeButtonProps) => {
-
+    const pathName = usePathname();
+    const router = useRouter();
     /*
         깜빡임 현상 제거를 위해 dangerouslySetInnerHTML 로 헤더쪽에 스크립트 추가
     */
@@ -50,6 +51,9 @@ const DarkModeBtn = ({}: TThemeButtonProps) => {
           htmlEl.classList.add(THEME.DARK);
           localStorage.setItem(LOCAL_STORAGE_KEY.THEME, THEME.DARK);
           setThemeState("dark");
+        }
+        if(pathName === "/comment"){
+            router.refresh;
         }
     };
 
