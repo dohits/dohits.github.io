@@ -3,7 +3,7 @@ import LivereComponent from "@/app/_components/LivereComponent";
 
 export default function Comment() {
   return (
-    <main className=" dark:bg-zinc-950
+    <main className="dark:bg-zinc-950
                       w-full flex flex-col rounded-3xl mb-2">
       <li className="glitch-wrapper flex flex-col mt-12">
         <div className="anime-hideview">
