@@ -30,9 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  
   return (
-    <html lang="ko">
+    <html lang="ko" className="" suppressHydrationWarning={true}>
       {/* Google Tag Manager 스크립트 [google analytics] */}
       <head>
         <script
@@ -42,10 +41,25 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              // 구글 ANALYTICS
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${process.env.GOOGLE_ANALYTICS}');
+              
+
+              // 다크모드 로직
+              const theme = localStorage.getItem("theme");
+              if(theme===undefined || theme==="null"){theme="dark"}
+              document.documentElement.setAttribute("data-theme", theme);
+              if (theme === "dark") {
+                document.querySelector('html')?.classList.add("dark");
+                document.querySelector('html')?.classList.remove("light");
+              }else {
+                document.querySelector('html')?.classList.add("light");
+                document.querySelector('html')?.classList.remove("dark");
+              }
+
             `,
           }}
         ></script>

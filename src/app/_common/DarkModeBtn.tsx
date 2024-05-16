@@ -15,13 +15,22 @@ const LOCAL_STORAGE_KEY = {
 
 const DarkModeBtn = ({}: TThemeButtonProps) => {
 
+    /*
+        깜빡임 현상 제거를 위해 dangerouslySetInnerHTML 로 헤더쪽에 스크립트 추가
+    */
     useLayoutEffect(() => {
         const theme = localStorage.getItem(LOCAL_STORAGE_KEY.THEME) || THEME.DARK;
         if (theme === THEME.DARK) {
-            document.querySelector('html')?.classList.add(THEME.DARK);
+            //document.querySelector('html')?.classList.add(THEME.DARK);
+            //document.querySelector('html')?.classList.remove(THEME.LIGHT);
+            setThemeState("dark");
+        }else {
+            //document.querySelector('html')?.classList.add(THEME.LIGHT);
+            //document.querySelector('html')?.classList.remove(THEME.DARK);
+            setThemeState("light");
         }
     }, []);
-
+    
     const [themeState,setThemeState] = useState("dark");
 
     const toggleTheme = () => {
@@ -32,13 +41,15 @@ const DarkModeBtn = ({}: TThemeButtonProps) => {
         const enabledDarkMode = htmlEl.classList.contains(THEME.DARK);
         if (enabledDarkMode) {
           htmlEl.classList.remove(THEME.DARK);
+          htmlEl.classList.add(THEME.LIGHT);
           localStorage.removeItem(LOCAL_STORAGE_KEY.THEME);
-          setThemeState("dark");
+          localStorage.setItem(LOCAL_STORAGE_KEY.THEME, THEME.LIGHT);
+          setThemeState("light");
         } else {
+          htmlEl.classList.remove(THEME.LIGHT);
           htmlEl.classList.add(THEME.DARK);
           localStorage.setItem(LOCAL_STORAGE_KEY.THEME, THEME.DARK);
-          console.log(localStorage.getItem(LOCAL_STORAGE_KEY.THEME));
-          setThemeState("light");
+          setThemeState("dark");
         }
     };
 
