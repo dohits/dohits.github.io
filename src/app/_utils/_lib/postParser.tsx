@@ -120,7 +120,7 @@ export async function MarkdownRender ({content} : {content:any}){
   return (
     <>
       <div className='dark:!bg-zinc-950
-                      MARKDOWN_CONTAINER markdown-body bg-white'>
+                      !bg-white MARKDOWN_CONTAINER markdown-body'>
         <div className='border-solid border-b-2 border-emerald-400 pb-4 flex flex-col'>
           <div className='text-zinc-400 sm:pt-0 pt-4 sm:text-center text-left text-xs italic'>{content.postAbstract.category} - {content.postDetail.category}</div>
           <div className='dark:text-white
