@@ -11,8 +11,10 @@ export default function About({visible}:{visible:boolean}) {
           </li>
           {/* badge */}
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- Languages</div>
-            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- Languages</div>
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={'/badges/css3Badge.svg'} alt="css3Badge" />
               <img className="h-full rounded-md" src={'/badges/html5Badge.svg'} alt="html5Badge" />
               <img className="h-full rounded-md" src={'/badges/javaBadge.svg'} alt="javaBadge" />
@@ -23,8 +25,10 @@ export default function About({visible}:{visible:boolean}) {
           </li>
 
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- Frameworks, Platforms and Libraries </div>
-            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- Frameworks, Platforms and Libraries </div>
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={ '/badges/springBadge.svg'} alt="springBadge" />
               <img className="h-full rounded-md" src={ '/badges/egovBadge.svg'} alt="egovBadge" />
               <img className="h-full rounded-md" src={ '/badges/thymeleafBadge.svg'} alt="thymeleafBadge" />
@@ -41,8 +45,10 @@ export default function About({visible}:{visible:boolean}) {
           </li>
 
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- DB / DBTools</div>
-            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- DB / DBTools</div>
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={ '/badges/mysqlBadge.svg'} alt="mysqlBadge" />
               <img className="h-full rounded-md" src={ '/badges/oracledbBadge.svg'} alt="oracledbBadge" />
               <img className="h-full rounded-md" src={ '/badges/dbeaverBadge.svg'} alt="dbeaverBadge" />
@@ -51,8 +57,10 @@ export default function About({visible}:{visible:boolean}) {
           </li>
 
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- IDEs / Editors</div>
-            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- IDEs / Editors</div>
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={ '/badges/eclipseBadge.svg'} alt="eclipseBadge" />
               <img className="h-full rounded-md" src={ '/badges/intelijBadge.svg'} alt="intelijBadge" />
               <img className="h-full rounded-md" src={ '/badges/androidstudioBadge.svg'} alt="androidstudioBadge" />
@@ -61,8 +69,10 @@ export default function About({visible}:{visible:boolean}) {
           </li>
 
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- Version Control </div>
-            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- Version Control </div>
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={ '/badges/svnBadge.svg'} alt="svnBadge" />
               <img className="h-full rounded-md" src={ '/badges/gitBadge.svg'} alt="gitBadge" />
               <img className="h-full rounded-md" src={ '/badges/giteaBadge.svg'} alt="giteaBadge" />
@@ -71,41 +81,56 @@ export default function About({visible}:{visible:boolean}) {
           </li>
 
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- Collaboration tool </div>
-            <div className="flex space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl flex-wrap">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- Collaboration tool </div>
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl flex-wrap">
               <img className="h-full rounded-md mt-2 ml-2" src={ '/badges/figmaBadge.svg'} alt="figmaBadge" />
               <img className="h-full rounded-md" src={ '/badges/jiraBadge.svg'} alt="jiraBadge" />
             </div>
           </li>
 
           <li className="mt-4">
-            <div className="text-white text-xl font-bold">- Api </div> 
-            <div className="flex flex-col space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- Api </div> 
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex flex-col space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl">
 
               <img className="w-28 rounded-md mt-2 ml-2" src={ '/badges/chatgptBadge.svg'} alt="chatgptBadge" />
-              <div className="text-zinc-200 text-xs font-thin">- Chat Bot</div>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- Chat Bot</div>
 
               <img className="w-28 rounded-md" src={ '/badges/firebaseBadge.svg'} alt="firebaseBadge" />
-              <div className="text-zinc-200 text-xs font-thin">- FCM Mobile Push Message</div>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- FCM Mobile Push Message</div>
 
               <img className="w-28 rounded-md" src={ '/badges/kakaoBadge.svg'} alt="kakaoBadge" />
-              <div className="text-zinc-200 text-xs font-thin">- Kakao Map</div>
-              <div className="text-zinc-200 text-xs font-thin">- Kakao login</div>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- Kakao Map</div>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- Kakao login</div>
 
               <img className="w-16 rounded-md" src={ '/badges/tossBadge.svg'} alt="tossBadge" />
-              <div className="text-zinc-200 text-xs font-thin">- Toss Payments Core Api + SDK </div>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- Toss Payments Core Api + SDK </div>
             </div>
           </li>
 
           <li className="mt-4 mb-4">
-            <div className="text-white text-xl font-bold">- Other </div>
-            <div className="flex flex-col space-x-2 space-y-2 mt-2 pt-2 p-4 bg-zinc-700 rounded-xl">
+            <div className="dark:text-white
+                         text-zinc-950 text-xl font-bold">- Other </div>
+            <div className="dark:bg-zinc-700
+                            bg-zinc-300 flex flex-col space-x-2 space-y-2 mt-2 pt-2 p-4 rounded-xl">
 
               <img className="w-28 rounded-md mt-2 ml-2" src={ '/badges/elasticsearchBadge.svg'} alt="elasticsearchBadge" />
-              <span className="text-zinc-200">ELK Stack</span>
-              <div className="text-zinc-300 text-xs font-thin">- Elastic Search / Kibana / LogStash 스택 구축 및 백엔드 연동</div>
-              <div className="text-zinc-300 text-xs font-thin">- 형태소 분석기를 활용한 자동 완성 / 오타 교정 / 초성 검색 구현</div>
-              <div className="text-zinc-300 text-xs font-thin">- 유저 검색량에 따른 유사도 가중치 부여</div>
+              <span className="dark:text-zinc-200
+                               text-zinc-950">ELK Stack</span>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- Elastic Search / Kibana / LogStash 스택 구축 및 백엔드 연동</div>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- 형태소 분석기를 활용한 자동 완성 / 오타 교정 / 초성 검색 구현</div>
+              <div className="dark:text-zinc-200
+                              text-zinc-950 text-xs font-thin">- 유저 검색량에 따른 유사도 가중치 부여</div>
             </div>
           </li>
         </ul>

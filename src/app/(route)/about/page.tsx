@@ -20,12 +20,15 @@ export default function About() {
     <main className="flex">
       <div className="w-full h-full">
         <ul>
-          <li className="text-white text-6xl font-bold italic">About</li>
+          <li className="dark:text-white
+                         text-zinc-950 text-6xl font-bold italic">About</li>
         </ul>
 
         <ul onClick={handleHistoryOpen} className="mt-8 mb-8">
-          <li className="text-white text-4xl font-bold mb-8">- History 
-            <span className="text-sm font-thin text-white ml-3">{HistoryListOpen ? <>Close</> : <>Open</>}</span>
+          <li className="dark:text-white
+                         text-zinc-950 text-4xl font-bold mb-8">- History 
+            <span className="dark:text-white
+                         text-zinc-950 text-sm font-thin ml-3">{HistoryListOpen ? <>Close</> : <>Open</>}</span>
           </li>
           {HistoryListOpen ? 
           <>
@@ -45,8 +48,10 @@ export default function About() {
         </ul>
 
         <ul onClick={handleSkillOpen} className="mt-3">
-          <li className="text-white text-4xl font-bold">- Skill
-            <span className="text-sm font-thin text-white ml-3">{skillListOpen ? <>Close</> : <>Open</>}</span>
+          <li className="dark:text-white
+                         text-zinc-950 text-4xl font-bold">- Skill
+            <span className="dark:text-white
+                         text-zinc-950 text-sm font-thin ml-3">{skillListOpen ? <>Close</> : <>Open</>}</span>
           </li>
           <SkillList visible={skillListOpen}/>
         </ul>
