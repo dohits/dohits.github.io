@@ -3,6 +3,7 @@ import SkillList from "@/app/(route)/about/_components/SkillList"
 
 import { useState } from "react";
 import HistoryList from "./_components/HistoryList";
+import YearGauge from "./_components/YearGauge";
 export default function About() {
 
   const [skillListOpen,setSkillListOpen] = useState(true);
@@ -25,6 +26,7 @@ export default function About() {
         </ul>
 
         <ul onClick={handleHistoryOpen} className="mt-8 mb-8">
+          <YearGauge/>
           <li className="dark:text-white
                          text-zinc-950 text-4xl font-bold mb-8">- History 
             <span className="dark:text-white
