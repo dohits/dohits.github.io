@@ -4,7 +4,7 @@ const NotFound: NextPage = () => {
   return (
     <>
       <div className="text-white w-full h-full flex flex-col justify-center items-center text-center">
-        <div className="bg-white z-10 rounded-full p-4">
+        <div className="z-10 p-4">
           <span className='dark:text-white
                             text-zinc-950 text-6xl mb-1 font-gamja-flower'>이런...</span><br/>
           <span className='dark:text-white
