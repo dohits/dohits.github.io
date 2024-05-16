@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background: #09090B;
+  /*background: #09090B;*/
 }
 ::selection {
   background: #6EE7B7;

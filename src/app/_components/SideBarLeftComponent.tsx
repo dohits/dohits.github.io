@@ -62,7 +62,7 @@ function SidebarLeftComponent(){
       <>
         <div className="dark:bg-zinc-950
                         bg-white z-10 fixed md:sticky pl-3 md:pl-0 h-full w-full max-w-[250px] font-spoqa overflow-y-scroll customScroll anime-lr-move z-[99]">
-          <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl">
+          <div className="mt-8 px-4 py-4 /*bg-zinc-800*/ rounded-3xl mb-20">
             {/**
             <ul className="flex justify-center h-10 w-full place-content-center rounded-lg">
               <li className="content-center w-full">
@@ -123,7 +123,7 @@ function SidebarLeftComponent(){
         </div>
         </>
         :
-        <div className="animate-bounce fixed">
+        <div className="animate-bounce fixed z-[40]">
           <Image className="dark:invert-0
                             invert min-w-7 w-7 h-full content-center -rotate-90 mt-3 ml-3 z-[100]" src='/icons/sidebarBtn.svg' alt="sidebarBtn"
           width={100} height={100} onClick={handleOpen} />
