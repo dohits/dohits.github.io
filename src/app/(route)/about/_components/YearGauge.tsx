@@ -21,7 +21,7 @@ export default function YearGauge({
 
   return(
     <>
-      <div className="max-w-[1200px]">
+      <div className="w-full mt-6">
         <div className="dark:text-teal-400 text-teal-700 font-medium italic text-xs">{startDay.toLocaleDateString()} ~ Now</div>
         <ul className="mt-2 flex items-center gap-x-1 mb-2">
           <li className="whitespace-nowrap mr-2 italic dark:text-teal-400 font-medium text-teal-700 bg-teal-200 dark:bg-teal-900 rounded-md text-xs pl-2 pr-2 pt-1 pb-1">{fullPercentYear} 년차</li>

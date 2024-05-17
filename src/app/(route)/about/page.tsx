@@ -4,6 +4,7 @@ import SkillList from "@/app/(route)/about/_components/SkillList"
 import { useState } from "react";
 import HistoryList from "./_components/HistoryList";
 import YearGauge from "./_components/YearGauge";
+import ProfileCard from "./_components/ProfileCard";
 export default function About() {
 
   const [skillListOpen,setSkillListOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function About() {
           <li className="dark:text-white
                          text-zinc-950 text-6xl font-bold italic">About</li>
         </ul>
-        <ul onClick={handleCareerOpen} className="mt-8 mb-8">
+        <ul onClick={handleCareerOpen} className="mt-8 mb-8 max-w-[800px]">
           <li className="dark:text-white
                           text-zinc-950 text-xl font-bold mb-8">- Career Info
             <span className="dark:text-white
@@ -36,6 +37,7 @@ export default function About() {
           </li>
           {careerOpen && 
             <>
+              <ProfileCard/>
               <YearGauge />
               <li className="text-xs text-zinc-700 dark:text-zinc-400 space-y-2 border-l-4 border-solid pl-6 border-teal-600">
                 <div>
@@ -67,7 +69,7 @@ export default function About() {
          <li className="dark:text-white
                           text-zinc-950 text-xl font-bold mb-8">- Skill Info
             <span className="dark:text-white
-                        text-zinc-950 text-xs font-thin ml-3">{careerOpen ? <>Close</> : <>Open</>}
+                        text-zinc-950 text-xs font-thin ml-3">{skillListOpen ? <>Close</> : <>Open</>}
             </span>
           </li>
           <SkillList visible={skillListOpen}/>
