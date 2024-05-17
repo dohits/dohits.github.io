@@ -9,6 +9,7 @@ export default function ProfileCard(){
             <li>
               <div className="dark:text-white text-zinc-950 text-sm italic">강도희 <span className="ml-2 italic text-xs text-zinc-700 dark:text-zinc-300 font-thin whitespace-nowrap">TechTree 재직중</span></div>
               <div className="dark:text-zinc-400 text-zinc-500 text-xs italic">Web FullStack Developer</div>
+              <div className="mt-2 dark:text-zinc-400 text-zinc-500 text-xs italic font-light">- 한 우물 보단 여러 우물을 많이 파는것을 좋아해요.</div>
             </li>
           </div>
           <li><div className="hidden sm:flex dark:text-zinc-400 text-zinc-500 text-xs italic">1995.07.19</div></li>
