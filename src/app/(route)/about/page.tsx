@@ -6,16 +6,19 @@ import HistoryList from "./_components/HistoryList";
 import YearGauge from "./_components/YearGauge";
 export default function About() {
 
-  const [skillListOpen,setSkillListOpen] = useState(true);
-  const [HistoryListOpen,setHistoryListOpen] = useState(true);
+  const [skillListOpen,setSkillListOpen] = useState(false);
+  const [historyListOpen,setHistoryListOpen] = useState(false);
+  const [careerOpen,setCareerOpen] = useState(false);
 
   const handleSkillOpen = () => {
     setSkillListOpen(!skillListOpen);
   }
   const handleHistoryOpen = () => {
-    setHistoryListOpen(!HistoryListOpen);
+    setHistoryListOpen(!historyListOpen);
   }
- 
+  const handleCareerOpen = () => {
+    setCareerOpen(!careerOpen);
+  }
 
   return (
     <main className="flex">
@@ -24,15 +27,31 @@ export default function About() {
           <li className="dark:text-white
                          text-zinc-950 text-6xl font-bold italic">About</li>
         </ul>
-
+        <ul onClick={handleCareerOpen} className="mt-8 mb-8">
+          <li className="dark:text-white
+                          text-zinc-950 text-xl font-bold mb-8">- Career Info
+            <span className="dark:text-white
+                        text-zinc-950 text-xs font-thin ml-3">{careerOpen ? <>Close</> : <>Open</>}
+            </span>
+          </li>
+          {careerOpen && 
+            <>
+              <YearGauge />
+              <li className="text-xs text-zinc-700 dark:text-zinc-400">
+                <span>- 2014 ~ 2020 중원대 컴퓨터공학과 (졸)</span><br/>
+                <span>- 2016 ~ 2018 육군 병장 만기전역 (9사단 29연대 전산병)</span><br/>
+                <span>- 2023 ~ 2024 </span><br/>
+              </li>
+            </>
+          }
+        </ul>
         <ul onClick={handleHistoryOpen} className="mt-8 mb-8">
-          <YearGauge />
           <li className="dark:text-white
                          text-zinc-950 text-4xl font-bold mb-8">- History 
             <span className="dark:text-white
-                         text-zinc-950 text-sm font-thin ml-3">{HistoryListOpen ? <>Close</> : <>Open</>}</span>
+                         text-zinc-950 text-sm font-thin ml-3">{historyListOpen ? <>Close</> : <>Open</>}</span>
           </li>
-          {HistoryListOpen ? 
+          {historyListOpen ? 
           <>
             <HistoryList date="" title="헌법과 법률" contents="대통령은 헌법과 법률이 정하는 바에 의하여 국군을 통수한다. 모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다."/>
             <HistoryList unCircle={true} date="" title="국회와 국무총리" contents="국회는 국무총리 또는 국무위원의 해임을 대통령에게 건의할 수 있다. 비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로 할 수 있다. 다만, 사형을 선고한 경우에는 그러하지 아니하다."/>          
