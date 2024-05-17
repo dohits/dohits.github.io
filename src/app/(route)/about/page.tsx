@@ -26,7 +26,7 @@ export default function About() {
         </ul>
 
         <ul onClick={handleHistoryOpen} className="mt-8 mb-8">
-          <YearGauge/>
+          <YearGauge />
           <li className="dark:text-white
                          text-zinc-950 text-4xl font-bold mb-8">- History 
             <span className="dark:text-white
