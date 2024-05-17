@@ -3,7 +3,7 @@ export default function YearGauge({
 }){
   // TODO :: 재활용 필요시 startDay 및 타입 Props 로 받는 로직으로 수정
 
-  const startDay = new Date("2023-11-10");
+  const startDay = new Date("2023-10-10");
   const endDay = new Date();
   const millisecondsPerDay = 24 * 60 * 60 * 1000;
   const resultInDays = Math.floor((endDay.getTime() - startDay.getTime()) / millisecondsPerDay);
@@ -21,7 +21,7 @@ export default function YearGauge({
 
   return(
     <>
-      <div className="max-w-[600px]">
+      <div className="max-w-[1200px]">
         <div className="dark:text-teal-400 text-teal-700 font-medium italic text-xs">{startDay.toLocaleDateString()} ~ Now</div>
         <ul className="mt-2 flex items-center gap-x-1 mb-2">
           <li className="whitespace-nowrap mr-2 italic dark:text-teal-400 font-medium text-teal-700 bg-teal-200 dark:bg-teal-900 rounded-md text-xs pl-2 pr-2 pt-1 pb-1">{fullPercentYear} 년차</li>
