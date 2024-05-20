@@ -48,7 +48,7 @@ function HeaderComponent(){
           <div className="h-full w-full">
             <a className="flex items-center space-x-3 h-full" href="/">
               <li className="h-full content-center">
-                <img className="min-w-8 w-8 rounded-full" src={process.env.NEXT_PUBLIC_URL + '/images/headerLogo.jpg'} alt="headerLogo" />
+                <img className="min-w-8 w-8 h-8 min-h-8 rounded-full" src={'/images/profileImg.jpg'} alt="profileImg" />
               </li>
               <li>
                 <p className="text-md font-bold">{process.env.NEXT_PUBLIC_COMPANY_NAME}</p>

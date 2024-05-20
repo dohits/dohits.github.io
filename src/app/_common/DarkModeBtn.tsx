@@ -59,7 +59,7 @@ const DarkModeBtn = ({}: TThemeButtonProps) => {
 
     return (
         <>
-          <button onClick={toggleTheme} className='w-20 h-full'>
+          <button onClick={toggleTheme} className='w-20 h-full flex justify-center items-center'>
             <ul className='flex space-x-3'>
               <li>
                 <img className="dark:invert
