@@ -25,9 +25,10 @@ tailwindcss: 3.4.1
 
 ![mainpage_screenshot_1](https://dohits.github.io/images/mainpage_screenshot_1.png)
 
-![mainpage_screenshot_2](https://dohits.github.io/images/mainpage_screenshot_1.png)
+![mainpage_screenshot_2](https://dohits.github.io/images/mainpage_screenshot_2.png)
 
 > 모바일 대응 반응형 웹 (최소 width:280px)
+
 > 다크모드 <-> 라이트모드
 
 ## LIVE
