@@ -18,7 +18,7 @@ function HeaderComponent(){
 
   const menuData:MenuDataType[] = [
     { id: '1', menu_code: 'posts', menu_up_code: 'root', name: 'Posts', path: '/posts/list/1' },
-    { id: '2', menu_code: 'about', menu_up_code: 'root', name: 'About(공사중)', path: '/about' },
+    { id: '2', menu_code: 'about', menu_up_code: 'root', name: 'About', path: '/about' },
     { id: '3', menu_code: 'comment', menu_up_code: 'root', name: 'Comment', path: '/comment' },
   ];
 

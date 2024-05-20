@@ -33,7 +33,7 @@ function SidebarLeftComponent(){
     { id: '2', menu_code: 'posts', menu_up_code: 'root', name: 'Posts', path: '/posts' },
     { id: '201', menu_code: 'postall', menu_up_code: 'posts', name: '전체글보기', path: '/posts/list/1' },
     { id: '202', menu_code: 'postIT', menu_up_code: 'posts', name: 'IT', path: '/posts/IT/list/1' },
-    { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About(공사중)', path: '/about' },
+    { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About', path: '/about' },
     { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment', path: '/comment' },
   ];
 
