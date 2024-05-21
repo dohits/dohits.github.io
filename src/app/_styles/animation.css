@@ -176,3 +176,21 @@
 }
 /**/
 
+.anime-lr-view {
+  animation: lrview 0.5s ease-in-out forwards;
+}
+
+@keyframes lrview {
+  0% {
+    transform: translate(20%,20%);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-5%,-5%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}

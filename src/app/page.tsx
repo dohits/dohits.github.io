@@ -8,7 +8,7 @@ export default async function Home({params}:{params:string}) {
 
   return (
     <main className="flex flex-col justify-center w-full">
-      <ul className="flex flex-col text-center w-full">
+      <ul className="flex flex-col text-center w-full ">
         <li className="glitch-wrapper flex flex-col mt-12">
           <div className="anime-hideview">
             <div className="dark:text-white
@@ -64,7 +64,7 @@ export default async function Home({params}:{params:string}) {
           </div>
           <div className="flex flex-wrap w-full justify-center">
             {spl.map((gpldata) => (
-              <div key={gpldata.postDetail.id} className="w-full max-w-[600px]">
+              <div key={gpldata.postDetail.id} className="w-full max-w-[600px] anime-lr-view">
                 <a href={gpldata.postAbstract.url} className="w-full">
                   <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
                     <img className="object-cover h-full w-full rounded-3xl border-2 border-white border-solid" src={gpldata.postDetail.thumbnail} alt="postImg"/>

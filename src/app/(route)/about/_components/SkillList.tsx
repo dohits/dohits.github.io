@@ -10,7 +10,7 @@ export default function About({visible}:{visible:boolean}) {
             {/*<div className="text-white text-4xl font-bold">abcdefgasdf</div>*/}
           </li>
           {/* badge */}
-          <li className="mt-4">
+          <li className="mt-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- Languages</div>
             <div className="dark:bg-zinc-700
@@ -24,7 +24,7 @@ export default function About({visible}:{visible:boolean}) {
             </div>
           </li>
 
-          <li className="mt-4">
+          <li className="mt-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- Frameworks, Platforms and Libraries </div>
             <div className="dark:bg-zinc-700
@@ -44,7 +44,7 @@ export default function About({visible}:{visible:boolean}) {
             </div>
           </li>
 
-          <li className="mt-4">
+          <li className="mt-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- DB / DBTools</div>
             <div className="dark:bg-zinc-700
@@ -56,7 +56,7 @@ export default function About({visible}:{visible:boolean}) {
             </div>
           </li>
 
-          <li className="mt-4">
+          <li className="mt-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- IDEs / Editors</div>
             <div className="dark:bg-zinc-700
@@ -68,7 +68,7 @@ export default function About({visible}:{visible:boolean}) {
             </div>
           </li>
 
-          <li className="mt-4">
+          <li className="mt-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- Version Control </div>
             <div className="dark:bg-zinc-700
@@ -80,7 +80,7 @@ export default function About({visible}:{visible:boolean}) {
             </div>
           </li>
 
-          <li className="mt-4">
+          <li className="mt-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- Collaboration tool </div>
             <div className="dark:bg-zinc-700
@@ -90,7 +90,7 @@ export default function About({visible}:{visible:boolean}) {
             </div>
           </li>
 
-          <li className="mt-4">
+          <li className="mt-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- Api </div> 
             <div className="dark:bg-zinc-700
@@ -116,7 +116,7 @@ export default function About({visible}:{visible:boolean}) {
             </div>
           </li>
 
-          <li className="mt-4 mb-4">
+          <li className="mt-4 mb-4 anime-lr-view">
             <div className="dark:text-white
                          text-zinc-950 text-xl font-bold">- Other </div>
             <div className="dark:bg-zinc-700

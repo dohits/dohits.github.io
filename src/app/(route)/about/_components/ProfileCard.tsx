@@ -1,7 +1,7 @@
 export default function ProfileCard(){
   return (
     <>
-      <div className="dark:bg-neutral-800 dark:shadow-none
+      <div className="dark:bg-neutral-800 dark:shadow-none anime-lr-view
                       shadow-md w-full relative block overflow-hidden rounded-lg border border-gray-100 flex flex-col justify-between">
         <ul className="p-4 flex justify-between">
           <div className="flex space-x-4">

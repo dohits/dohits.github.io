@@ -31,7 +31,7 @@ function LivereComponent() {
     <>
       {/* <!-- 라이브리 시티 설치 코드 --> */}
       <div suppressHydrationWarning={true}
-        className="dark:bg-white p-4 rounded-3xl mt-20"
+        className="dark:bg-white p-4 rounded-3xl mt-20 anime-lr-view"
         id="lv-container"
         data-id="city"
         data-uid="MTAyMC81OTgzOS8zNjMwMQ=="

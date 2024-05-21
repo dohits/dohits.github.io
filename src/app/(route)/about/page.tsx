@@ -39,7 +39,7 @@ export default function About() {
             <>
               <ProfileCard/>
               <YearGauge />
-              <li className="text-xs text-zinc-700 dark:text-zinc-400 space-y-2 border-l-4 border-solid pl-6 border-teal-600">
+              <li className="text-xs text-zinc-700 dark:text-zinc-400 space-y-2 border-l-4 border-solid pl-6 border-teal-600 anime-lr-view">
                 <div>
                   <span className=" italic dark:text-zinc-400 text-zinc-950">- 2014.03 ~ 2020.08</span>
                   <br/><span className="font-thin dark:text-zinc-400 text-zinc-950">중원대 컴퓨터공학과 (졸)</span>

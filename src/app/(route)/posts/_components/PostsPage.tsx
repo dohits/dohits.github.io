@@ -48,7 +48,7 @@ export default async function allpost({
         {spl.map((gpldata) => (
           <div key={gpldata.postDetail.id} className="w-full max-w-[600px]">
             <a href={gpldata.postAbstract.url} className="w-full">
-              <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white">
+              <div className="relative mt-4 p-1 overflow-hidden flex flex-col w-full text-white anime-lr-view">
                 <img className="object-cover h-full w-full rounded-3xl border-2 border-white border-solid" src={gpldata.postDetail.thumbnail} alt="postImg"/>
                 <div className="dark:text-white
                                 text-zinc-950 text-lg pl-3 pt-3">{gpldata.postDetail.title}</div>
