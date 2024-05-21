@@ -104,7 +104,8 @@ return (
           :
           <>
             <li className="text-white w-full text-center"> 
-              <div className="dark:text-white
+              <div className="dark:text-white0.
+              
                               text-zinc-900 mb-6 text-2xl italic">준비된 Ads 가 없습니다</div>
               <div className="dark:bg-white
                               mt-6 h-full bg-zinc-950 w-full rounded-3xl overflow-hidden">
