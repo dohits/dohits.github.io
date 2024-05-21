@@ -5,10 +5,12 @@ import CategoryBadge from "@/app/_common/CategoryBadge";
 export default async function Home({params}:{params:string}) {
 
   let spl = await sortPostList(1,1);
-
   return (
     <main className="flex flex-col justify-center w-full">
-      <ul className="flex flex-col text-center w-full ">
+      <ul className="flex flex-col text-center w-full">
+        <li className="opacity-95 h-0 flex place-content-center z-1">
+          <img className="anime-lr-view dark:invert-0 top-4 invert relative w-96 h-96 rounded-full" src="/images/mainpageBg.gif"></img>
+        </li>
         <li className="glitch-wrapper flex flex-col mt-12">
           <div className="anime-hideview">
             <div className="dark:text-white
@@ -56,7 +58,7 @@ export default async function Home({params}:{params:string}) {
           </a>
         </li>
       </ul>
-      <ul>
+      <ul className="z-10">
         <li className="dark:text-white
                       text-zinc-950 mt-10 w-full h-full">
           <div className="text-center">

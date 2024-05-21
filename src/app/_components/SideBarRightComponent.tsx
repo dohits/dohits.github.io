@@ -39,10 +39,10 @@ function SidebarRightComponent(){
     if (postTitle.length > 0 && postTitle[0]) {
       setTitle(postTitle[0].innerText);
     }
-
     // 부제
     const tocArray = Array.from(
       document.querySelectorAll<HTMLElement>('#markdownPost > :is(h1, h2, h3)'),
+
     );
     setHeadings(tocArray);
 
