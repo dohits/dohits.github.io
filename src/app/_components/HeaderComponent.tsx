@@ -20,6 +20,7 @@ function HeaderComponent(){
     { id: '1', menu_code: 'posts', menu_up_code: 'root', name: 'Posts', path: '/posts/list/1' },
     { id: '2', menu_code: 'about', menu_up_code: 'root', name: 'About', path: '/about' },
     { id: '3', menu_code: 'comment', menu_up_code: 'root', name: 'Comment', path: '/comment' },
+    { id: '4', menu_code: 'unityProj(테스트)', menu_up_code: 'root', name: 'UnityProj', path: '/unityProj' },
   ];
 
   const buildMenuTree = (menuData: MenuDataType[]) => {

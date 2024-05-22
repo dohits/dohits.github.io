@@ -35,6 +35,7 @@ function SidebarLeftComponent(){
     { id: '202', menu_code: 'postIT', menu_up_code: 'posts', name: 'IT', path: '/posts/IT/list/1' },
     { id: '4', menu_code: 'about', menu_up_code: 'root', name: 'About', path: '/about' },
     { id: '7', menu_code: 'comment', menu_up_code: 'root', name: 'Comment', path: '/comment' },
+    { id: '8', menu_code: 'unityProj(테스트)', menu_up_code: 'root', name: 'UnityProj', path: '/unityProj' },
   ];
 
   const buildMenuTree = (menuData: MenuDataType[]) => {
