@@ -18,7 +18,7 @@ function SidebarRightComponent(){
   // TOC 요소 셋팅
   const [headings, setHeadings] = useState<HTMLElement[]>([]);
   const [title,setTitle] = useState("");
-  const [activeHeadingId, setActiveHeadingId] = useState<string>('');
+  const [activeHeadingId, setActiveHeadingId] = useState<string[]>([]);
   
   // cleanup 핸들 함수
   const cleanup = () => {
@@ -50,12 +50,14 @@ function SidebarRightComponent(){
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setActiveHeadingId(entry.target.id);
+          setActiveHeadingId(prev => [...new Set([...prev, entry.target.id])]);
+        } else {
+          setActiveHeadingId(prev => prev.filter(id => id !== entry.target.id));
         }
       });
     }, {
       root: document.querySelector('.bodyContents'),
-      rootMargin: '-250px 0px',
+      rootMargin: '0px 0px',
       threshold: 1
     });
 
@@ -84,7 +86,7 @@ return (
               {headings.map((heading, index) => (
                 <li key={index} className="pb-1">
                   <Link href={`#${heading.id}`}>
-                    <div className={heading.id === activeHeadingId ? 
+                    <div className={activeHeadingId.includes(heading.id) ? 
                             /* 포커스 요소*/  'anime-toc-select p-2 text-black' 
                             /* 논 포커스*/   : 'anime-toc-nonselect'}>
                       {heading.tagName === 'H1' &&
