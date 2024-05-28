@@ -1,12 +1,19 @@
 
 import {selectPost, MarkdownRender} from "@/app/_utils/_lib/postParser";
 import {getPostList} from "@/app/_utils/_lib/postParser";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "상세페이지 테스트",
+  description: "상세상세",
+};
 
 export default async function Posts({params}:{params:any}) {
   const {post_category,post_title} = params;
   const postData = await selectPost(
                             decodeURI(post_title)
                             ,decodeURI(post_category));
+                            
   if (postData){
     return (
       <>

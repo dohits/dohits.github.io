@@ -16,18 +16,3 @@ export default function UnityLoader() {
   );
 }
 
-
-/* rules
-
-
-dice(3 times)
-/ at / df / it / 
-select result pt -> category board
-enem <-> pla (trn === hrtone)
-
-ㅁㅁㅁㅁ
-ㅁ   ㅁ
-ㅁ  ㅁ
-ㅁㅁ
-
-*/
