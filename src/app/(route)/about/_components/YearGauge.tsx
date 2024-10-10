@@ -11,7 +11,7 @@ export default function YearGauge({
   const Year = 365;
 
   const totalPercent = Math.floor(resultInDays/Year * 100); // 총 퍼센트
-  const fullPercentYear = Math.floor(totalPercent/100); // 1년 단위 카운트
+  const fullPercentYear = Math.floor(totalPercent/100) + 1; // 1년 단위 카운트
   const remainPercent = totalPercent % 100; // 나머지 퍼센트
 
   const gaugeCSS = `flex flex-col justify-center rounded-full overflow-hidden bg-teal-400 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-teal-600`;
